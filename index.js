@@ -7,6 +7,7 @@ import * as url from './libs/url'
 import * as types from './libs/types' 
 import * as num from './libs/number' 
 import * as str from './libs/string' 
+import * as date from './libs/date' 
 
 import './libs/prototype'
 
@@ -18,6 +19,7 @@ const utils = {
     ...types, 
     ...num,
     ...str,
+    ...date,
     version:package.version,
 }
 
