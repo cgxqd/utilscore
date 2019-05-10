@@ -23,6 +23,6 @@ const utils = {
 
 
 
-window._utils = utils
+window.utils = utils
 
 export default utils
