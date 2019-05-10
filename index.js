@@ -1,4 +1,5 @@
 
+import package from './package.json'
 import * as obj from './libs/object' 
 import * as arr from './libs/array' 
 import * as fn from './libs/function' 
@@ -16,8 +17,11 @@ const utils = {
     ...url,
     ...types, 
     ...num,
-    ...str
+    ...str,
+    version:package.version,
 }
+
+
 
 window._utils = utils
 
