@@ -1,0 +1,26 @@
+{
+  "name": "utilscore",
+  "version": "0.0.3",
+  "description": "javascript 工具函数包",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "parcel index.js",
+    "build": "parcel build index.js",
+    "dev": "parcel test.html --out-dir dist2"
+  },
+  "keywords": [
+    "utilscore",
+    "core",
+    "common",
+    "commonJS",
+    "common-js",
+    "util",
+    "utils",
+    "lib",
+    "libs",
+    "javascript"
+  ],
+  "author": "cgx",
+  "license": "ISC"
+}
