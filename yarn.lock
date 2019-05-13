@@ -6,3 +6,10 @@ utilscore@^0.0.3:
   version "0.0.3"
   resolved "https://registry.npm.taobao.org/utilscore/download/utilscore-0.0.3.tgz#f295c032582e8c5ba69a9f3394ef31605b0f31e7"
   integrity sha1-8pXAMlgujFummp8zlO8xYFsPMec=
+
+utilscore@^0.0.6:
+  version "0.0.6"
+  resolved "https://registry.npm.taobao.org/utilscore/download/utilscore-0.0.6.tgz#7c305e174d3f99b8450d695d03bc539b21576274"
+  integrity sha1-fDBeF00/mbhFDWldA7xTmyFXYnQ=
+  dependencies:
+    utilscore "^0.0.3"

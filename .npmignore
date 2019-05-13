@@ -2,3 +2,4 @@ dist2
 .cache
 .idea
 node_modules
+yarn-error.log

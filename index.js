@@ -22,10 +22,7 @@ const utilscore = {
     ...url,
     version:packageJSON.version,
 }
-
-
-window.utilscore = utilscore
-
+global.utilscore = utilscore
 for(let key in utilscore){
 	exports[key] = utilscore[key]
 }
