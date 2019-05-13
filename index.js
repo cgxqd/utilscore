@@ -7,7 +7,8 @@ import * as url from './libs/url'
 import * as types from './libs/types' 
 import * as num from './libs/number' 
 import * as str from './libs/string' 
-import * as date from './libs/date' 
+import * as date from './libs/date'
+import * as other from './libs/other'
 
 import './libs/prototype'
 
@@ -20,9 +21,12 @@ const utilscore = {
     ...num,
     ...types,
     ...url,
+    ...other,
     version:packageJSON.version,
 }
+
 global.utilscore = utilscore
+
 for(let key in utilscore){
 	exports[key] = utilscore[key]
 }
