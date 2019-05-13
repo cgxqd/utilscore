@@ -3,7 +3,7 @@
  * @param {number} min 最小值
  * @param {number} max 最大值
  */
-export const randomIntegerInRange = (min, max) => Math.floor(Math.random() * (max - min + 1)) + min;
+export const randomNum = (min, max) => Math.floor(Math.random() * (max - min + 1)) + min;
 
 /**
  * 将数字四舍五入到指定的小数位数。
