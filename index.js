@@ -1,5 +1,5 @@
 
-import package from './package.json'
+import packageJSON from './package.json'
 import * as obj from './libs/object' 
 import * as arr from './libs/array' 
 import * as fn from './libs/function' 
@@ -11,20 +11,23 @@ import * as date from './libs/date'
 
 import './libs/prototype'
 
-const utils = {
+const utilscore = {
     ...obj,
     ...arr,
-    ...fn,
-    ...url,
-    ...types, 
-    ...num,
-    ...str,
     ...date,
-    version:package.version,
+    ...fn,
+    ...str,
+    ...num,
+    ...types,
+    ...url,
+    version:packageJSON.version,
 }
 
 
+window.utilscore = utilscore
 
-window.utils = utils
+for(let key in utilscore){
+	exports[key] = utilscore[key]
+}
 
-export default utils
+

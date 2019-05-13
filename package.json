@@ -1,6 +1,6 @@
 {
   "name": "utilscore",
-  "version": "0.0.4",
+  "version": "0.0.6",
   "description": "javascript 工具函数包",
   "main": "index.js",
   "scripts": {
@@ -21,5 +21,8 @@
     "javascript"
   ],
   "author": "cgx",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "utilscore": "^0.0.3"
+  }
 }

@@ -2,7 +2,7 @@
 # yarn lockfile v1
 
 
-utilscore@^0.0.1:
-  version "0.0.1"
-  resolved "https://registry.npm.taobao.org/utilscore/download/utilscore-0.0.1.tgz?cache=0&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Futilscore%2Fdownload%2Futilscore-0.0.1.tgz#1798ec28f7e18e3a9751104d382d49390288a25e"
-  integrity sha1-F5jsKPfhjjqXURBNOC1JOQKIol4=
+utilscore@^0.0.3:
+  version "0.0.3"
+  resolved "https://registry.npm.taobao.org/utilscore/download/utilscore-0.0.3.tgz#f295c032582e8c5ba69a9f3394ef31605b0f31e7"
+  integrity sha1-8pXAMlgujFummp8zlO8xYFsPMec=

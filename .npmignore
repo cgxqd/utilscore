@@ -1,3 +1,4 @@
 dist2
 .cache
+.idea
 node_modules
