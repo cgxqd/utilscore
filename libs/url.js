@@ -43,7 +43,7 @@ export const Url = (url, options = {}) => {
 
 export const URLSearchParams = (param) => {
     if ($isObject(param)) {
-        return Object.keys(param).map(key => `${key}=${encodeURIComponent(param[key])}`).join('&')
+        return Object.keys(param).map(key => `${key}=${encodeURIComponent(JSON.stringify(param[key]))}`).join('&')
     } else if ($isString(param)) {
         let maps = {};
         param.replace(/^.[^\?]*\?/g, '').split('&').forEach(res => {
