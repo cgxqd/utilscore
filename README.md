@@ -54,13 +54,57 @@ console.log('pwd:',pwd) // pwd: **************6789
 ```
 ## :package:  API文档
 
-###  [Object](https://github.com/cgxqd/utilscore/blob/master/libs/object.js)
-###  [Array](https://github.com/cgxqd/utilscore/blob/master/libs/array.js)
-###  [Date](https://github.com/cgxqd/utilscore/blob/master/libs/date.js)
-###  [Function](https://github.com/cgxqd/utilscore/blob/master/libs/function.js)
-###  [String](https://github.com/cgxqd/utilscore/blob/master/libs/string.js)
-###  [Number](https://github.com/cgxqd/utilscore/blob/master/libs/number.js)
-###  [TypeOf](https://github.com/cgxqd/utilscore/blob/master/libs/types.js)
-###  [url](https://github.com/cgxqd/utilscore/blob/master/libs/url.js)
-###  [prototype](https://github.com/cgxqd/utilscore/blob/master/libs/prototype.js)
+> ###  [Object](https://github.com/cgxqd/utilscore/blob/master/libs/object.js)
+
+- deepClone 深度克隆。
+- orderBy 	返回按属性(props)和顺序(orders)排序的对象数组。
+- findPathByLeafId 根据 key 递归查找链带关系。
+
+> ###  [Array](https://github.com/cgxqd/utilscore/blob/master/libs/array.js)
+
+- uniqueBy 	根据属性去重数组。
+- unique	普通数组去重。
+
+> ###  [Date](https://github.com/cgxqd/utilscore/blob/master/libs/date.js)
+
+- formatTime 格式化时间。
+- formatHMS 将秒数转为 xx小时xx分钟xx秒 例如1h0m10s。
+
+> ###  [Function](https://github.com/cgxqd/utilscore/blob/master/libs/function.js)
+
+- throttle 函数节流(首次执行)。
+
+> ###  [String](https://github.com/cgxqd/utilscore/blob/master/libs/string.js)
+
+- mask 使用 * 遮蔽字符串。
+
+> ###  [Number](https://github.com/cgxqd/utilscore/blob/master/libs/number.js)
+
+- randomNum 返回指定范围内的随机整数。
+- round 将数字四舍五入到指定的小数位数。
+- sum 返回两个或两个以上数字/数字数组中元素之和。
+- sumBy 根据函数映射每个元素，然后返回数组的和。
+- toDecimalMark 将数字转化为千分位格式。
+
+> ###  [TypeOf](https://github.com/cgxqd/utilscore/blob/master/libs/types.js)
+
+- $isNull 判断类型Null
+- $isUndefined 判断类型Undefined
+- $isBoolean 判断类型Boolean
+- $isNumber 判断类型Number
+- $isString 判断类型String
+- $isSymbol 判断类型Symbol
+- $isObject 判断类型Object
+- $isRegExp 判断类型RegExp
+- $isArray 判断类型Array
+- $isFunction 判断类型Function
+
+> ###  [url](https://github.com/cgxqd/utilscore/blob/master/libs/url.js)
+
+- Url 根据对象 拼接参数
+- URLSearchParams url 序列化和反序列化
+
+> ###  [prototype](https://github.com/cgxqd/utilscore/blob/master/libs/prototype.js)
+
+- match_all 扩展 String的原型方法 es2019的matchAll（未兼容浏览器）
 
