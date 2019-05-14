@@ -1,7 +1,7 @@
 # utilscoreJS
 
+前端业务代码工具库(**不定时更新**)
 
-前端业务代码工具库（持续添加中）
 
 > 目的：高效率完成前端业务代码
 
@@ -52,7 +52,7 @@ import { mask } from 'utilscore'
 let pwd = mask('password:123456789',4);
 console.log('pwd:',pwd) // pwd: **************6789
 ```
-## API文档
+## :package:  API文档
 
 ###  [Object](https://github.com/cgxqd/utilscore/blob/master/libs/object.js)
 ###  [Array](https://github.com/cgxqd/utilscore/blob/master/libs/array.js)
