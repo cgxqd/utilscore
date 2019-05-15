@@ -10,7 +10,7 @@ import * as str from './libs/string'
 import * as date from './libs/date'
 import * as other from './libs/other'
 import * as validator from './libs/validator'
-
+import * as base64 from './libs/base64'
 import './libs/prototype'
 
 const utilscore = {
@@ -24,6 +24,7 @@ const utilscore = {
     ...url,
     ...other,
     ...validator,
+    ...base64,
     version:packageJSON.version,
 }
 
