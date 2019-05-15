@@ -64,6 +64,10 @@ console.log('pwd:',pwd) // pwd: **************6789
 
 - uniqueBy 	根据属性去重数组。
 - unique	普通数组去重。
+- maxNumBy 	找出数组中该属性最大值的一列
+- minNumBy 	找出数组中该属性最小值的一列
+- maxNum 	数组中的最大值
+- mixNum 	数组中的最小值
 
 > ###  [Date](https://github.com/cgxqd/utilscore/blob/master/libs/date.js)
 

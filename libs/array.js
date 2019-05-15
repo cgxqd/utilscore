@@ -16,3 +16,37 @@ export const uniqueBy = function(arr,key){
  */
 export const unique = (arr) =>
     arr.filter((element,index,array)=>array.indexOf(element) === index)
+
+
+/**
+ * 找出数组中该属性最大值的一列
+ * @param {array} arr 
+ * @param {string} key  
+ */    
+export const maxNumBy = (arr,key) => 
+    arr.find(item => item[key]===Math.max.apply(Math,arr.map(row=>row[key])))
+
+
+/**
+ * 找出数组中该属性最小值的一列
+ * @param {array} arr 
+ * @param {string} key  
+ */    
+export const minNumBy = (arr,key) => 
+    arr.find(item => item[key]===Math.min.apply(Math,arr.map(row=>row[key])))   
+
+
+/**
+ * 数组中的最大值
+ * @param {array} arr 
+ */    
+export const maxNum = (arr) => 
+    Math.max.apply(Math,arr)
+
+    
+/**
+ * 数组中的最小值
+ * @param {array} arr 
+ */    
+export const minNum = (arr) => 
+    Math.min.apply(Math,arr)
