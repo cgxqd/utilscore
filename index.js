@@ -9,7 +9,7 @@ import * as num from './libs/number'
 import * as str from './libs/string' 
 import * as date from './libs/date'
 import * as other from './libs/other'
-import * as graceChecker from './libs/graceChecker'
+import * as validator from './libs/validator'
 
 import './libs/prototype'
 
@@ -23,7 +23,7 @@ const utilscore = {
     ...types,
     ...url,
     ...other,
-    ...graceChecker,
+    ...validator,
     version:packageJSON.version,
 }
 
