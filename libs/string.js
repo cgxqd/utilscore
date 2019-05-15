@@ -1,9 +1,9 @@
 /**
  * 使用 * 遮蔽字符串
- * @param {*} cc 
- * @param {*} num 
- * @param {*} mask 
- * @example
+ * @param {string} cc 
+ * @param {number} num 
+ * @param {string} mask 
+ * @example utilscore.mask('45444a8wef8',3,'*') // => "********ef8"
  */
 export const mask = (cc, num = 4, mask = '*') =>('' + cc).slice(0, -num).replace(/./g, mask) + ('' + cc).slice(-num);
 

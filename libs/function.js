@@ -4,7 +4,7 @@
  * @param {*} delay 
  * @param {*} type 
  */
-export const  throttle = function (fn,delay=3000){
+export const  throttleOnce = function (fn,delay=3000){
 
 	let timer = null;
 	let status = true;

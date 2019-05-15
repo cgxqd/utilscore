@@ -27,9 +27,15 @@ export const deepClone = (obj) => {
 
 /**
  * 返回按属性(props)和顺序(orders)排序的对象数组。
- * @param {*} arr 
- * @param {*} props 
- * @param {*} orders 
+ * @param {array} arr 
+ * @param {array} props 
+ * @param {array} orders 'desc升序' 、 'asc降序'
+ * @example const users = [
+                { name: 'aaa', age: 48 },
+                { name: 'awegawe', age: 36 },
+                { name: 'aweaw', age: 40 }
+            ]; 
+            utilscore.orderBy(users, ['age'],['asc']) // => [{"name":"awegawe","age":36},{"name":"aweaw","age":40},{"name":"aaa","age":48}]
  */
 export const orderBy = (arr, props, orders) => {
     return [...arr].sort((a, b) =>

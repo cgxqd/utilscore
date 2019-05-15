@@ -57,7 +57,7 @@ console.log('pwd:',pwd) // pwd: **************6789
 > ###  [Object](https://github.com/cgxqd/utilscore/blob/master/libs/object.js)
 
 - deepClone 深度克隆。
-- orderBy 	返回按属性(props)和顺序(orders)排序的对象数组。
+- orderBy 	返回按属性(props)和顺序(orders)排序的对象数组,用于数据排序。
 - findPathByLeafId 根据 key 递归查找链带关系。
 
 > ###  [Array](https://github.com/cgxqd/utilscore/blob/master/libs/array.js)
@@ -76,7 +76,7 @@ console.log('pwd:',pwd) // pwd: **************6789
 
 > ###  [Function](https://github.com/cgxqd/utilscore/blob/master/libs/function.js)
 
-- throttle 函数节流(首次执行)。
+- throttleOnce 函数节流(首次执行)。
 
 > ###  [String](https://github.com/cgxqd/utilscore/blob/master/libs/string.js)
 
