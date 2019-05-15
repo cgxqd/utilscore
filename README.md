@@ -5,7 +5,7 @@
 
 > 目的：高效率完成前端业务代码
 
-业务开发过程中，会经常用到`String,Number,Array,Object,Function,Date扩展方法`、`浏览器类型判断`等常用函数，为避免不同项目多次复制粘贴的麻烦，这里统一封装，并发布到npm，以提高开发效率。如果你也有常用的代码，欢迎为本项目提交pr。
+业务开发过程中，会经常用到`String,Number,Array,Object,Function,Date扩展方法`、`浏览器类型判断`等常用函数，为避免不同项目多次复制粘贴的麻烦，这里统一封装，并发布到npm，以提高开发效率。如果你也有常用的代码，欢迎为本项目提交pr.
 
 ## 安装使用
 
@@ -92,16 +92,16 @@ console.log('pwd:',pwd) // pwd: **************6789
 
 > ###  [TypeOf](https://github.com/cgxqd/utilscore/blob/master/libs/types.js)
 
-- $isNull 判断类型Null
-- $isUndefined 判断类型Undefined
-- $isBoolean 判断类型Boolean
-- $isNumber 判断类型Number
-- $isString 判断类型String
-- $isSymbol 判断类型Symbol
-- $isObject 判断类型Object
-- $isRegExp 判断类型RegExp
-- $isArray 判断类型Array
-- $isFunction 判断类型Function
+- isNull 判断类型Null
+- isUndefined 判断类型Undefined
+- isBoolean 判断类型Boolean
+- isNumber 判断类型Number
+- isString 判断类型String
+- isSymbol 判断类型Symbol
+- isObject 判断类型Object
+- isRegExp 判断类型RegExp
+- isArray 判断类型Array
+- isFunction 判断类型Function
 
 > ###  [url](https://github.com/cgxqd/utilscore/blob/master/libs/url.js)
 
