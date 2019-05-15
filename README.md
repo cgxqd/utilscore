@@ -108,6 +108,10 @@ console.log('pwd:',pwd) // pwd: **************6789
 - insertUrl 根据对象中的参数匹配插入到url中
 - URLSearchParams url 序列化和反序列化
 
+> ###  [validator](https://github.com/cgxqd/utilscore/blob/master/libs/graceChecker.js)
+
+- graceChecker 表单验证
+
 > ###  [prototype](https://github.com/cgxqd/utilscore/blob/master/libs/prototype.js)
 
 - match_all 扩展 String的原型方法 es2019的matchAll（未兼容浏览器）
