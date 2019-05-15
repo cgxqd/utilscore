@@ -105,7 +105,7 @@ console.log('pwd:',pwd) // pwd: **************6789
 
 > ###  [url](https://github.com/cgxqd/utilscore/blob/master/libs/url.js)
 
-- Url 根据对象 拼接参数
+- insertUrl 根据对象中的参数匹配插入到url中
 - URLSearchParams url 序列化和反序列化
 
 > ###  [prototype](https://github.com/cgxqd/utilscore/blob/master/libs/prototype.js)

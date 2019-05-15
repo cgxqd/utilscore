@@ -1,11 +1,11 @@
 import { $isObject, $isString } from './types'
 /**
- * 请求参数
+ * 根据对象中的参数匹配插入到url中
  * @param {*} url 
  * @param {Object} options 
- * @example Url('http://www.baidu.com?:name',{name:'ceshi'}) // => http://www.baidu.com?ceshi
+ * @example utilscore.insertUrl('http://www.baidu.com?:name',{name:'ceshi'}) // => http://www.baidu.com?ceshi
  */
-export const Url = (url, options = {}) => {
+export const insertUrl = (url, options = {}) => {
     return url.replace(/:([a-zA-Z0-9_]{1,})/g, ($0, $1) => {
         let val = encodeURIComponent(options[$1]);
         if (val === undefined) {
@@ -19,7 +19,7 @@ export const Url = (url, options = {}) => {
 /**
  * url 序列化和反序列化
  * @param {Object||String} param 
- * @example URLSearchParams('https://www.baidu.com/s?ie=utf-8&f=8&rsv_bp=1&rsv_idx=1&tn=baidu&wd=parseQueryString&rsv_pq=8c7a6d0000146171&rsv_t=43d6RzTiyjUjUKtQtqfR3XL25JepKFwJYvvSpsj%2BJ7aFqxdBLDungY%2Bfx%2BE&rqlang=cn&rsv_enter=1&rsv_n=2&rsv_sug3=1') 
+ * @example utilscore.URLSearchParams('https://www.baidu.com/s?ie=utf-8&f=8&rsv_bp=1&rsv_idx=1&tn=baidu&wd=parseQueryString&rsv_pq=8c7a6d0000146171&rsv_t=43d6RzTiyjUjUKtQtqfR3XL25JepKFwJYvvSpsj%2BJ7aFqxdBLDungY%2Bfx%2BE&rqlang=cn&rsv_enter=1&rsv_n=2&rsv_sug3=1') 
             // => 
             {
                 "ie":"utf-8",

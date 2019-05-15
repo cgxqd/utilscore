@@ -76,7 +76,7 @@ export const orderBy = (arr, props, orders) => {
                         ]
                 }
             ]
-            findPathByLeafId('id',333,arr) // => [{"id":111,"value":"awefawef"},{"id":222,"value":"2222222aaa"}]
+            utilscore.findPathByLeafId('id',333,arr) // => [{"id":111,"value":"awefawef"},{"id":222,"value":"2222222aaa"}]
  */
 export const findPathByLeafId = (leafIdName,leafId, nodes, path = []) => {
     for(var i = 0; i < nodes.length; i++) {

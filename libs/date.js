@@ -2,7 +2,7 @@
  * 格式化时间
  * @param {*} obj 
  * @param {*} format 
- * @example utils.formatTime(new Date(),'yyyy-M-d h:m:s D') // => 2019-05-10 17:37:24 星期六
+ * @example utilscore.formatTime(new Date(),'yyyy-M-d h:m:s D') // => 2019-05-10 17:37:24 星期六
  */
 export const formatTime = (obj, format) => {
     if (format) {
@@ -49,7 +49,7 @@ export const formatTime = (obj, format) => {
   /**
    * @param  {s} 秒数
    * @return {String} 字符串
-   * @example formatHMS(3610) // -> 1h0m10s
+   * @example utilscore.formatHMS(3610) // -> 1h0m10s
    */
   export const formatHMS = (s) => {
     var str = ''
