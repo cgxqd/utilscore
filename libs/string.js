@@ -8,15 +8,15 @@ import { isArray, isString } from './types'
  * @param {string} mask 
  * @example utilscore.mask('45444a8wef8',3,'*') // => "********ef8"
  */
-export const mask = (cc, num = 4, mask = '*') =>('' + cc).slice(0, -num).replace(/./g, mask) + ('' + cc).slice(-num);
+export const mask = (cc, num = 4, mask = '*') =>('' + cc).slice(0, -num).replace(/./g, mask) + ('' + cc).slice(-num)
 
 /**
  * 生成一个随机的十六进制颜色代码
  */
 export const randomHexColorCode = () => {
     let n = ((Math.random() * 0xfffff) | 0).toString(16);
-    return '#' + (n.length !== 6 ? ((Math.random() * 0xf) | 0).toString(16) + n : n);
-  };
+    return '#' + (n.length !== 6 ? ((Math.random() * 0xf) | 0).toString(16) + n : n)
+  }
 
 
 /**
@@ -43,7 +43,7 @@ export const getCounts = (str,keys=null) => {
   keyMap.map(key=>{
     
     //处理包含特殊字符
-    var reg = new RegExp("\([`~!@#$^&*()=|{}':;',\\[\\].<>/?~！@#￥……&*（）——|{}【】‘；：”“'。，、？]\)",'g'); 
+    var reg = new RegExp("\([`~!@#$^&*()=|{}':;',\\[\\].<>/?~！@#￥……&*（）——|{}【】‘；：”“'。，、？]\)",'g')
     let _key = key.replace(reg,'\\$1')
 
     let res = str.match(new RegExp(_key,'g'))

@@ -90,7 +90,7 @@ console.log('pwd:',pwd) // pwd: **************6789
 - round 将数字四舍五入到指定的小数位数。
 - sum 返回两个或两个以上数字/数字数组中元素之和。
 - sumBy 根据函数映射每个元素，然后返回数组的和。
-- toDecimalMark 将数字转化为千分位格式。
+- toDecimalMark 将数字转化为千分位格式，将数字转化为千分位格式,可以在数字前面加上符号。
 
 > ###  [TypeOf](https://github.com/cgxqd/utilscore/blob/master/libs/types.js)
 
@@ -104,6 +104,7 @@ console.log('pwd:',pwd) // pwd: **************6789
 - isRegExp 判断类型RegExp
 - isArray 判断类型Array
 - isFunction 判断类型Function
+- getType 获取类型，全能型的typeOf
 
 > ###  [url](https://github.com/cgxqd/utilscore/blob/master/libs/url.js)
 

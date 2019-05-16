@@ -58,3 +58,5 @@ export const isArray = value => Object.prototype.toString.call(value) == "[objec
  * @param {any} value 
  */
 export const isFunction = value => Object.prototype.toString.call(value) == "[object Function]"
+
+export const getType = (value) => Object.prototype.toString.call(value).match(/\s([a-z]+)/i)[1].toLocaleLowerCase()

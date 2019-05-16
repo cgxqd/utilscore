@@ -31,7 +31,13 @@ export const sumBy = (arr, fn) =>
   arr.map(typeof fn === 'function' ? fn : val => val[fn]).reduce((acc, val) => acc + val, 0);
 
 /**
- * 将数字转化为千分位格式
- * @param {*} num 
+ * 将数字转化为千分位格式,可以在数字前面加上符号
+ * @param {number|string} num 
+ * @param {string} mark
+ * @returns {string}
  */
-export const toDecimalMark = num => num.toLocaleString('en-US');
+export const toDecimalMark = (num,mark='') => {
+  let _num = num.toLocaleString('en-US');
+  if(mark) return _num.padStart(_num.length+1,mark)
+  return _num;
+}
