@@ -1,4 +1,4 @@
-# utilscoreJS
+# [utilscoreJS](https://github.com/cgxqd/utilscore)
 
 前端业务代码工具库(**不定时更新**)
 
@@ -22,15 +22,15 @@
 </script>
 ```
 
-### npm:
+### npm
 ``` bash
 $ npm i utilscore
 ```
-### yarn:
+### yarn
 ``` bash
 $ yarn add utilscore
 ```
-### cnpm:
+### cnpm
 ``` bash
 $ cnpm i utilscore
 ```
