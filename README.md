@@ -81,6 +81,8 @@ console.log('pwd:',pwd) // pwd: **************6789
 > ###  [String](https://github.com/cgxqd/utilscore/blob/master/libs/string.js)
 
 - mask 使用 * 遮蔽字符串。
+- randomHexColorCode 生成一个随机的十六进制颜色代码
+- getCounts 返回元素出现的次数
 
 > ###  [Number](https://github.com/cgxqd/utilscore/blob/master/libs/number.js)
 

@@ -11,6 +11,7 @@ import * as date from './libs/date'
 import * as other from './libs/other'
 import * as validator from './libs/validator'
 import * as base64 from './libs/base64'
+import * as files from './libs/files'
 import './libs/prototype'
 
 const utilscore = {
@@ -25,6 +26,7 @@ const utilscore = {
     ...other,
     ...validator,
     ...base64,
+    ...files,
     version:packageJSON.version,
 }
 
