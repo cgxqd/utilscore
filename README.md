@@ -17,8 +17,8 @@
 <script src="./node_modules/utilscore/dist/index.js"></script>
 <!-- <script src="./dist/index.js"></script> -->
 <script>
-	let pwd = utilscore.mask('password:123456789',4);
-	console.log('pwd:',pwd) // pwd: **************6789
+	let txt = utilscore.mask('12398765432',3,7) 
+	console.log(txt) // => "123****5432"
 </script>
 ```
 
@@ -40,8 +40,8 @@ React、VueJS,小程序等javascript环境
 ``` javascript
 // 完整引入
 import utilscore from 'utilscore'
-let pwd = utilscore.mask('password:123456789',4);
-console.log('pwd:',pwd) // pwd: **************6789
+let txt = utilscore.mask('12398765432',3,7) 
+console.log(txt) // => "123****5432"
 ```
 
 **推荐使用方法**
@@ -49,8 +49,8 @@ console.log('pwd:',pwd) // pwd: **************6789
 你真的不需要完整引入所有函数，所以只引入需要使用的方法即可。
 ``` javascript
 import { mask } from 'utilscore'
-let pwd = mask('password:123456789',4);
-console.log('pwd:',pwd) // pwd: **************6789
+let txt = mask('12398765432',3,7) 
+console.log(txt) // => "123****5432"
 ```
 ## :package:  API文档
 
