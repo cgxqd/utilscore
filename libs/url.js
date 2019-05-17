@@ -49,7 +49,7 @@ export const URLSearchParams = (param) => {
         let maps = {};
         param.replace(/^.[^\?]*\?/g, '').split('&').forEach(res => {
             let row = decodeURIComponent(res).split('=');
-            maps[row[0] + ''] = decodeURIComponent(row[1])
+            maps[row[0] + ''] = JSON.parse(decodeURIComponent(row[1]))
         });
         return maps
     }
