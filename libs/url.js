@@ -1,4 +1,4 @@
-import { $isObject, $isString } from './types'
+import { isObject, isString } from './types'
 /**
  * 根据对象中的参数匹配插入到url中
  * @param {*} url 
@@ -43,9 +43,9 @@ export const insertUrl = (url, options = {}) => {
  */
 
 export const URLSearchParams = (param) => {
-    if ($isObject(param)) {
+    if (isObject(param)) {
         return Object.keys(param).map(key => `${key}=${encodeURIComponent(JSON.stringify(param[key]))}`).join('&')
-    } else if ($isString(param)) {
+    } else if (isString(param)) {
         let maps = {};
         param.replace(/^.[^\?]*\?/g, '').split('&').forEach(res => {
             let row = decodeURIComponent(res).split('=');
