@@ -2,13 +2,37 @@ import { unique } from './array'
 import { isArray, isString } from './types' 
 
 /**
- * 使用 * 遮蔽字符串
+ * 根据位置,使用 * 遮蔽字符串
+ * @param {string} cc 
+ * @param {number} num1 
+ * @param {number} num2 
+ * @param {string} _mask 
+ * @example utilscore.mask('12398765432',3,7) // => "123****5432"
+ */ 
+export const mask = (cc, num1 = 0, num2 = 0, _mask = '*') => {
+  let reg = new RegExp(`\^\(\.\{${num1}\}\)\(\.\{${num2 - num1}\}\)\(\.${num2>=cc.length?'\?':'\+'}\)\$`);
+  return cc.replace(reg,($0,$1,$2,$3)=> $1+$2.replace(/./g,_mask)+$3) 
+}
+
+/**
+ * 从位置左边开始，使用 * 遮蔽字符串
  * @param {string} cc 
  * @param {number} num 
- * @param {string} mask 
- * @example utilscore.mask('45444a8wef8',3,'*') // => "********ef8"
+ * @param {string} _mask 
  */
-export const mask = (cc, num = 4, mask = '*') =>('' + cc).slice(0, -num).replace(/./g, mask) + ('' + cc).slice(-num)
+export const maskLeft = (cc, num = 0, _mask = '*') => mask(cc,0,num,_mask)
+  
+/**
+ * 从位置右边开始，使用 * 遮蔽字符串
+ * @param {string} cc 
+ * @param {number} num 
+ * @param {string} _mask 
+ */
+export const maskRight = (cc, num = 0, _mask = '*') => {
+  let strL = cc.length
+  return mask(cc,num>strL?0:strL-num,strL,_mask)
+}
+
 
 /**
  * 生成一个随机的十六进制颜色代码

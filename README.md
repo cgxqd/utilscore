@@ -64,10 +64,10 @@ console.log('pwd:',pwd) // pwd: **************6789
 
 - uniqueBy 	根据属性去重数组。
 - unique	普通数组去重。
-- maxNumBy 	找出数组中该属性最大值的一列
-- minNumBy 	找出数组中该属性最小值的一列
-- maxNum 	数组中的最大值
-- mixNum 	数组中的最小值
+- maxNumBy 	找出数组中该属性最大值的一列。
+- minNumBy 	找出数组中该属性最小值的一列。
+- maxNum 	数组中的最大值。
+- mixNum 	数组中的最小值。
 
 > ###  [Date](https://github.com/cgxqd/utilscore/blob/master/libs/date.js)
 
@@ -80,9 +80,11 @@ console.log('pwd:',pwd) // pwd: **************6789
 
 > ###  [String](https://github.com/cgxqd/utilscore/blob/master/libs/string.js)
 
-- mask 使用 * 遮蔽字符串。
-- randomHexColorCode 生成一个随机的十六进制颜色代码
-- getCounts 返回元素出现的次数
+- mask 根据位置,使用 * 遮蔽字符串。
+- maskLeft 从位置左边开始，使用 * 遮蔽字符串。
+- maskRight 从位置右边开始，使用 * 遮蔽字符串。
+- randomHexColorCode 生成一个随机的十六进制颜色代码。
+- getCounts 返回元素出现的次数。
 
 > ###  [Number](https://github.com/cgxqd/utilscore/blob/master/libs/number.js)
 
@@ -94,33 +96,33 @@ console.log('pwd:',pwd) // pwd: **************6789
 
 > ###  [TypeOf](https://github.com/cgxqd/utilscore/blob/master/libs/types.js)
 
-- isNull 判断类型Null
-- isUndefined 判断类型Undefined
-- isBoolean 判断类型Boolean
-- isNumber 判断类型Number
-- isString 判断类型String
-- isSymbol 判断类型Symbol
-- isObject 判断类型Object
-- isRegExp 判断类型RegExp
-- isArray 判断类型Array
-- isFunction 判断类型Function
-- getType 获取类型，全能型的typeOf
+- isNull 判断类型Null。
+- isUndefined 判断类型Undefined。
+- isBoolean 判断类型Boolean。
+- isNumber 判断类型Number。
+- isString 判断类型String。
+- isSymbol 判断类型Symbol。
+- isObject 判断类型Object。
+- isRegExp 判断类型RegExp。
+- isArray 判断类型Array。
+- isFunction 判断类型Function。
+- getType 获取类型，全能型的typeOf。
 
 > ###  [url](https://github.com/cgxqd/utilscore/blob/master/libs/url.js)
 
-- insertUrl 根据对象中的参数匹配插入到url中
-- URLSearchParams url 序列化和反序列化
+- insertUrl 根据对象中的参数匹配插入到url中。
+- URLSearchParams url 序列化和反序列化。
 
 > ###  [validator](https://github.com/cgxqd/utilscore/blob/master/libs/graceChecker.js)
 
-- graceChecker 表单验证
+- graceChecker 表单验证。
 
 > ###  [base64](https://github.com/cgxqd/utilscore/blob/master/libs/base64.js)
 
-- encode base64加密
-- decode base64解密
+- encode base64加密。
+- decode base64解密。
 
 > ###  [prototype](https://github.com/cgxqd/utilscore/blob/master/libs/prototype.js)
 
-- match_all 扩展 String的原型方法 es2019的matchAll（未兼容浏览器）
+- match_all 扩展 String的原型方法 es2019的matchAll（未兼容浏览器）。
 
