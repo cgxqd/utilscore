@@ -47,10 +47,14 @@ export const URLSearchParams = (param) => {
         return Object.keys(param).map(key => `${key}=${encodeURIComponent(JSON.stringify(param[key]))}`).join('&')
     } else if (isString(param)) {
         let maps = {};
-        param.replace(/^.[^\?]*\?/g, '').split('&').forEach(res => {
+        param.match(/([\w\%\d]+\=[\w\%\d]+)/g).forEach(res=>{
             let row = decodeURIComponent(res).split('=');
-            maps[row[0] + ''] = JSON.parse(decodeURIComponent(row[1]))
-        });
+            try{
+                maps[row[0] + ''] = JSON.parse(decodeURIComponent(row[1]))
+            }catch(err){
+                maps[row[0] + ''] = decodeURIComponent(row[1])
+            }
+        })
         return maps
     }
 }
