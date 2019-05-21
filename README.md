@@ -76,7 +76,10 @@ console.log(txt) // => "123****5432"
 
 > ###  [Function](https://github.com/cgxqd/utilscore/blob/master/libs/function.js)
 
-- throttleOnce 函数节流(首次执行)。
+- debounceStart 函数防抖 (立即执行版)。
+- debounceEnd 函数防抖 (非立即执行版)。
+- debounce 函数防抖 (完全版)。
+- throttle 函数节流
 
 > ###  [String](https://github.com/cgxqd/utilscore/blob/master/libs/string.js)
 
