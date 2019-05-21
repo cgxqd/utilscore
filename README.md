@@ -88,6 +88,8 @@ console.log(txt) // => "123****5432"
 - maskRight 从位置右边开始，使用 * 遮蔽字符串。
 - randomHexColorCode 生成一个随机的十六进制颜色代码。
 - getCounts 返回元素出现的次数。
+- uuid 全局唯一标识符 UUID
+- guid GUID:128位的数字标识符
 
 > ###  [Number](https://github.com/cgxqd/utilscore/blob/master/libs/number.js)
 
