@@ -47,15 +47,47 @@ export const URLSearchParams = (param) => {
         return Object.keys(param).map(key => `${key}=${encodeURIComponent(JSON.stringify(param[key]))}`).join('&')
     } else if (isString(param)) {
         let maps = {};
-		let _params = param.match(/([\w\%\d]+\=[\w\%\d]+)/g)
-        _params && _params.match(/([\w\%\d]+\=[\w\%\d]+)/g).forEach(res=>{
+        let _params = param.match(/(([\w\%\/\#\~\!\*\(\)\_\-\.\'\$]+)\=([\w\%\/\#\~\!\*\(\)\_\-\.\'\$]+)?)/ig)
+        _params && _params.forEach(res => {
             let row = decodeURIComponent(res).split('=');
-            try{
-                maps[row[0] + ''] = JSON.parse(decodeURIComponent(row[1]))
-            }catch(err){
-                maps[row[0] + ''] = decodeURIComponent(row[1])
+            try {
+                maps[row[0]] = JSON.parse(decodeURIComponent(row[1]))
+            } catch (err) {
+                try{
+                    maps[row[0]] = decodeURIComponent(row[1])
+                }
+                //特殊字符情况
+                catch(err){ 
+                    maps[row[0]] = row[1]
+                }
             }
         })
         return maps
+    }
+}
+
+
+/**
+ * 返回网址的相关信息，模拟了 浏览器的 new URL(urlString) 部分功能
+ * @param {string} urlString url网址
+ * @returns {object}  
+ * @example utilscore.Url('https://www.baidu.com/s?ie=utf-8&f=8&rsv_bp=1&rsv_idx=1&tn=baidu&wd=ceshi')
+                // => 
+                // {
+                //     "href":"https://www.baidu.com/s?ie=utf-8&f=8&rsv_bp=1&rsv_idx=1&tn=baidu&wd=ceshi",
+                //     "origin":"https://www.baidu.com",
+                //     "protocol":"https:",
+                //     "host":"www.baidu.com",
+                //     "pathname":"/s",
+                //     "search":"?ie=utf-8&f=8&rsv_bp=1&rsv_idx=1&tn=baidu&wd=ceshi",
+                //     "hostname":"www.baidu.com"
+                // }
+ */
+export const Url = (urlString) => {
+    try {
+        let [href, origin, protocol, host, pathname, search] = /((http:|https:)\/\/([\w.\-\:]+))([\w\/\-]+)?(\?.+)?/ig.exec(urlString)
+        return { href, origin, protocol, host, pathname, search, hostname: host }
+    } catch (err) {
+        console.error(`Raises a SYNTAX ERROR exception as 'about:blank/${urlString}' is not valid`)
     }
 }

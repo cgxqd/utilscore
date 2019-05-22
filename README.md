@@ -117,6 +117,7 @@ console.log(txt) // => "123****5432"
 
 - insertUrl 根据对象中的参数匹配插入到url中。
 - URLSearchParams url 序列化和反序列化。
+- Url 返回网址的相关信息，模拟了 浏览器的 new URL(urlString) 部分功能
 
 > ###  [validator](https://github.com/cgxqd/utilscore/blob/master/libs/graceChecker.js)
 
