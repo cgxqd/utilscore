@@ -1,3 +1,4 @@
+import {isObject} from './types'
 
 /**
  * 深度克隆
@@ -98,3 +99,34 @@ export const findPathByLeafId = (leafIdName,leafId, nodes, path = []) => {
     }
 }
   
+
+/**
+ * 对象合并
+ * @param {object} a 对象 
+ * @param {object} b 对象
+ * @example var a = {
+                a:11,
+                o:{
+                    b:22
+            }
+            var b = {
+                c:33,
+                o:{
+                    d:44
+                }
+            }
+            utilscore.merge(a,b)
+            // => 
+            {"a":11,"o":{"b":22,"d":44},"c":33}
+}
+ */
+export const merge = (a,b) => {
+    for (var key in b) {
+        if (!a.hasOwnProperty(key)) {
+            a[key] = b[key];
+        } else if (isObject(b[key],) && isObject(a[key])) {
+            merge(a[key], b[key]);
+        }
+    }
+    return a;
+}
