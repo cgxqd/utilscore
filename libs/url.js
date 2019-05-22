@@ -18,7 +18,7 @@ export const insertUrl = (url, options = {}) => {
 
 /**
  * url 序列化和反序列化
- * @param {Object||String} param 
+ * @param {Object|String} param 
  * @example utilscore.URLSearchParams('https://www.baidu.com/s?ie=utf-8&f=8&rsv_bp=1&rsv_idx=1&tn=baidu&wd=parseQueryString&rsv_pq=8c7a6d0000146171&rsv_t=43d6RzTiyjUjUKtQtqfR3XL25JepKFwJYvvSpsj%2BJ7aFqxdBLDungY%2Bfx%2BE&rqlang=cn&rsv_enter=1&rsv_n=2&rsv_sug3=1') 
             // => 
             {
@@ -71,22 +71,24 @@ export const URLSearchParams = (param) => {
  * 返回网址的相关信息，模拟了 浏览器的 new URL(urlString) 部分功能
  * @param {string} urlString url网址
  * @returns {object}  
- * @example utilscore.Url('https://www.baidu.com/s?ie=utf-8&f=8&rsv_bp=1&rsv_idx=1&tn=baidu&wd=ceshi')
+ * @example utilscore.Url('https://localhost:3000/translate?aldtype=16047&query=&keyfrom=baidu&smartresult=dict&lang=auto2zh#zh/en/%E7%AB%AF%E5%8F%A3')
                 // => 
                 // {
-                //     "href":"https://www.baidu.com/s?ie=utf-8&f=8&rsv_bp=1&rsv_idx=1&tn=baidu&wd=ceshi",
-                //     "origin":"https://www.baidu.com",
-                //     "protocol":"https:",
-                //     "host":"www.baidu.com",
-                //     "pathname":"/s",
-                //     "search":"?ie=utf-8&f=8&rsv_bp=1&rsv_idx=1&tn=baidu&wd=ceshi",
-                //     "hostname":"www.baidu.com"
+                //     hash: "#zh/en/%E7%AB%AF%E5%8F%A3",
+                //     host: "localhost:3000",
+                //     hostname: "localhost",
+                //     href: "https://localhost:3000/translate?aldtype=16047&query=&keyfrom=baidu&smartresult=dict&lang=auto2zh#zh/en/%E7%AB%AF%E5%8F%A3",
+                //     origin: "https://localhost:3000",
+                //     pathname: "/translate",
+                //     port: "3000",
+                //     protocol: "https:",
+                //     search: "?aldtype=16047&query=&keyfrom=baidu&smartresult=dict&lang=auto2zh"
                 // }
  */
 export const Url = (urlString) => {
     try {
-        let [href, origin, protocol, host, pathname, search] = /((http:|https:)\/\/([\w.\-\:]+))([\w\/\-]+)?(\?.+)?/ig.exec(urlString)
-        return { href, origin, protocol, host, pathname, search, hostname: host }
+        let [href, origin ,protocol,host,hostname,portName,port,pathname,searchName,search,hash ] = /((http:|https:)\/\/(([\w.\-]+)(\:(\d+))?))([\w\/\-]+)?((\?[^#]+)(.+)?)?/ig.exec(urlString)
+        return {hash,host,hostname,href,origin,pathname,port,protocol,search}
     } catch (err) {
         console.error(`Raises a SYNTAX ERROR exception as 'about:blank/${urlString}' is not valid`)
     }
