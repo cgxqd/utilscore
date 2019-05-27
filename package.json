@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "parcel index.js",
-    "build": "parcel build index.js"
+    "start": "parcel index.js --no-source-maps",
+    "build": "parcel build index.js --no-source-maps"
   },
   "repository": {
     "type": "git",

@@ -1,5 +1,4 @@
-
-import packageJSON from './package.json'
+import {version} from './package.json'
 import * as obj from './libs/object' 
 import * as arr from './libs/array' 
 import * as fn from './libs/function' 
@@ -11,10 +10,13 @@ import * as date from './libs/date'
 import * as other from './libs/other'
 import * as validator from './libs/validator'
 import * as base64 from './libs/base64'
-import * as files from './libs/files'
-import './libs/prototype'
 
-const utilscore = {
+let root = typeof window !== 'undefined' ? window : global
+root.parcelRequire = ((modules, cache, entry, globalName) => {
+    var previousRequire = typeof parcelRequire === 'function' && parcelRequire;
+})
+
+var utilscore = {
     ...obj,
     ...arr,
     ...date,
@@ -26,11 +28,10 @@ const utilscore = {
     ...other,
     ...validator,
     ...base64,
-    ...files,
-    version:packageJSON.version,
+    version:version,
 }
 
-global.utilscore = utilscore
+root.utilscore = utilscore
 
 for(let key in utilscore){
 	exports[key] = utilscore[key]
