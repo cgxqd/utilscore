@@ -7,3 +7,7 @@ String.prototype.match_all = function(reg){
 	} 
 	return arr
 }	
+
+Object.prototype.fromEntries = function(val){
+	return val.reduce((prev,val)=>Object.assign(prev,{[val[0]]:val[1]}),{})
+}
