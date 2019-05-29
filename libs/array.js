@@ -21,7 +21,8 @@ export const unique = (arr) =>
 /**
  * 找出数组中该属性最大值的一列
  * @param {array} arr 
- * @param {string} key  
+ * @param {string} key 
+ * @example utilscore.maxNumBy([{num:55},{num:541},{num:41}],'num') // => {num: 541}
  */    
 export const maxNumBy = (arr,key) => 
     arr.find(item => item[key]===Math.max.apply(Math,arr.map(row=>row[key])))
@@ -30,7 +31,8 @@ export const maxNumBy = (arr,key) =>
 /**
  * 找出数组中该属性最小值的一列
  * @param {array} arr 
- * @param {string} key  
+ * @param {string} key 
+ * @example utilscore.minNumBy([{num:55},{num:541},{num:41}],'num') // =>  {num: 41}
  */    
 export const minNumBy = (arr,key) => 
     arr.find(item => item[key]===Math.min.apply(Math,arr.map(row=>row[key])))   
@@ -38,7 +40,8 @@ export const minNumBy = (arr,key) =>
 
 /**
  * 数组中的最大值
- * @param {array} arr 
+ * @param {array} arr
+ * @example utilsocre.maxNum([12,3,31,5,3]) // => 31 
  */    
 export const maxNum = (arr) => 
     Math.max.apply(Math,arr)
@@ -47,6 +50,7 @@ export const maxNum = (arr) =>
 /**
  * 数组中的最小值
  * @param {array} arr 
+ * @example utilsocre.minNum([12,3,31,5,3]) // => 3 
  */    
 export const minNum = (arr) => 
     Math.min.apply(Math,arr)
