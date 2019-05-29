@@ -36,8 +36,4 @@ export const sumBy = (arr, fn) =>
  * @param {string} mark
  * @returns {string}
  */
-export const toDecimalMark = (num,mark='') => {
-  let _num = num.toLocaleString('en-US');
-  if(mark) return _num.padStart(_num.length+1,mark)
-  return _num;
-}
+export const toDecimalMark = (num,mark='') => num.toLocaleString('en-US').replace(/^/,mark);
