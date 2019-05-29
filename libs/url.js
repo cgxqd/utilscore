@@ -47,7 +47,7 @@ export const URLSearchParams = (param) => {
         return Object.keys(param).map(key => `${key}=${encodeURIComponent(JSON.stringify(param[key]))}`).join('&')
     } else if (isString(param)) {
         let maps = {};
-        let _params = param.match(/(([\w\%\/\#\~\!\*\(\)\_\-\.\'\$]+)\=([\w\%\/\#\~\!\*\(\)\_\-\.\'\$]+)?)/ig)
+        let _params = param.match(/(([\w%~!*\(\)_\-.']+)\=([\w%~!*\(\)_\-.']+)?)/ig)
         _params && _params.forEach(res => {
             let row = decodeURIComponent(res).split('=');
             try {
