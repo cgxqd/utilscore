@@ -131,6 +131,7 @@ console.log(txt) // => "123****5432"
 
 > ###  [prototype](https://github.com/cgxqd/utilscore/blob/master/libs/prototype.js)
 
-- match_all 扩展 String的原型方法 es10 的 matchAll（未兼容浏览器）。
+- match_all 扩展 String 的原型方法 es10 的 matchAll（未兼容浏览器）。
 - fromEntries 扩展 es10 的 Object.fromEntries() 
+- entries 扩展 es 的 Object.entries() 
 
