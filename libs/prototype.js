@@ -1,3 +1,4 @@
+//目前es10 的 matchAll 缺点是：1、要将迭代器转换为数组。2、需要设置/g
 String.prototype.match_all = function(reg){
 	var arr = []
 	var str = this;
@@ -8,6 +9,14 @@ String.prototype.match_all = function(reg){
 	return arr
 }	
 
+// 低于chrome74版本的需要兼容
 Object.prototype.fromEntries = function(val){
 	return val.reduce((prev,val)=>Object.assign(prev,{[val[0]]:val[1]}),{})
 }
+
+// 兼容性还可以
+Object.prototype.entries = function(obj){
+	return Object.keys(obj).reduce((acc,target)=>[...acc,[target,obj[target]]],[])
+}
+
+

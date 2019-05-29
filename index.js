@@ -10,6 +10,7 @@ import * as date from './libs/date'
 import * as other from './libs/other'
 import * as validator from './libs/validator'
 import * as base64 from './libs/base64'
+import './libs/prototype'
 
 let root = typeof window !== 'undefined' ? window : global
 root.parcelRequire = ((modules, cache, entry, globalName) => {
