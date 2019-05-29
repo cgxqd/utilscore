@@ -1,6 +1,6 @@
 {
   "name": "utilscore",
-  "version": "0.0.33",
+  "version": "0.0.34",
   "description": "javascript 工具函数包",
   "main": "index.js",
   "scripts": {
