@@ -59,4 +59,9 @@ export const isArray = value => Object.prototype.toString.call(value) == "[objec
  */
 export const isFunction = value => Object.prototype.toString.call(value) == "[object Function]"
 
+/**
+ * 获取数据类型
+ * @param {any} value
+ * @example utilscore.getType(null) // => "null"
+ */
 export const getType = (value) => Object.prototype.toString.call(value).match(/\s([a-z]+)/i)[1].toLocaleLowerCase()

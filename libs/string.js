@@ -19,6 +19,7 @@ export const mask = (cc, num1 = 0, num2 = 0, _mask = '*') => {
  * @param {string} cc 
  * @param {number} num 
  * @param {string} _mask 
+ * @example 用法跟 mask 类似
  */
 export const maskLeft = (cc, num = 0, _mask = '*') => mask(cc,0,num,_mask)
   
@@ -27,6 +28,7 @@ export const maskLeft = (cc, num = 0, _mask = '*') => mask(cc,0,num,_mask)
  * @param {string} cc 
  * @param {number} num 
  * @param {string} _mask 
+ * @example 用法跟 mask 类似
  */
 export const maskRight = (cc, num = 0, _mask = '*') => {
   let strL = cc.length
@@ -36,6 +38,7 @@ export const maskRight = (cc, num = 0, _mask = '*') => {
 
 /**
  * 生成一个随机的十六进制颜色代码
+ * @example utilscore.randomHexColorCode() // => "#c4aabc"
  */
 export const randomHexColorCode = () => {
     let n = ((Math.random() * 0xfffff) | 0).toString(16);
@@ -83,6 +86,7 @@ export const getCounts = (str,keys=null) => {
  * 全局唯一标识符 UUID
  * @param {number} len 长度
  * @param {number} radix 基数 62
+ * @example utilscore.uuid(10,62) // => "e424F79HP8"
  */
 export const uuid = (len, radix) => {
   var chars = '0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz'.split('');
@@ -115,6 +119,7 @@ export const uuid = (len, radix) => {
 
 /**
  * GUID:128位的数字标识符
+ * @example utilscore.guid() // => "537a3b5a-5c1b-433d-9814-532efdda6b10"
  */
 export const guid = () => {
   return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c) {

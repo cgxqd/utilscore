@@ -2,6 +2,7 @@
  * 返回指定范围内的随机整数。
  * @param {number} min 最小值
  * @param {number} max 最大值
+ * @example utilscore.randomNum(5,10) // => 5 || 6 || 7 || 8 || 9 || 10 
  */
 export const randomNum = (min, max) => Math.floor(Math.random() * (max - min + 1)) + min;
 
@@ -9,6 +10,7 @@ export const randomNum = (min, max) => Math.floor(Math.random() * (max - min + 1
  * 将数字四舍五入到指定的小数位数。
  * @param {number} n 操作的数字
  * @param {number} decimals 精确到几位小数 
+ * @example utilscore.round(12.555,2) // => 12.56
  */
 export const round = (n, decimals = 0) => {
     return Number(`${Math.round(`${n}e${decimals}`)}e-${decimals}`)
@@ -18,22 +20,25 @@ export const round = (n, decimals = 0) => {
 /**
  * 返回两个或两个以上数字/数字数组中元素之和。
  * @param  {...any} arr 操作的数组 
+ * @example utilscore.sum(...[1,2,3,4,5]) // => 15
  */
 export const sum = (...arr) => [...arr].reduce((acc, val) => acc + val, 0);
 
 
 /**
  * 根据函数映射每个元素，然后返回数组的和
- * @param {*} arr 
- * @param {*} fn 
+ * @param {Array} arr 
+ * @param {Function} fn 
+ * @example utilscore.sumBy([{num:1},{num:2},{num:3},{num:4},{num:5}],(row)=>row.num) // => 15
  */
 export const sumBy = (arr, fn) =>
   arr.map(typeof fn === 'function' ? fn : val => val[fn]).reduce((acc, val) => acc + val, 0);
 
 /**
  * 将数字转化为千分位格式,可以在数字前面加上符号
- * @param {number|string} num 
- * @param {string} mark
- * @returns {string}
+ * @param {Number|String} num 
+ * @param {String} mark
+ * @returns {String}
+ * @example utilscore.toDecimalMark(12345674654.123,'￥') // => "￥12,345,674,654.123"
  */
 export const toDecimalMark = (num,mark='') => num.toLocaleString('en-US').replace(/^/,mark);
