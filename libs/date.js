@@ -1,4 +1,11 @@
 /**
+ * 必填
+ * @param {String} key 
+ */
+export const requered = (key='') => {
+  console.error(`缺少参数${key}`)
+}
+/**
  * 格式化时间
  * @param {*} obj 
  * @param {*} format 
@@ -53,7 +60,10 @@ export const formatTime = (obj, format) => {
    */
   export const formatHMS = (s) => {
     var str = ''
-    if (s > 3600) {
+    if(s > 3600 * 24) {
+      str = Math.floor(s / 3600 / 24) + 'd' + Math.floor(s / 3600 % 24) + 'h' + Math.floor(s % 3600 / 60) + 'm' + s % 60 + 's'
+    }
+    else if (s > 3600) {
       str = Math.floor(s / 3600) + 'h' + Math.floor(s % 3600 / 60) + 'm' + s % 60 + 's'
     } else if (s > 60) {
       str = Math.floor(s / 60) + 'm' + s % 60 + 's'
@@ -62,3 +72,18 @@ export const formatTime = (obj, format) => {
     }
     return str
   }
+
+  /**
+   * 获取时间戳 (秒)
+   * @param {any} value 
+   */
+  export const unix = (value) => ~~ new Date(value).getTime().toString().substring(0,10)
+
+  /**
+   * 倒计时
+   * @param {any} target 
+   */
+  export const countDown = (target=requered()) => {
+    let time = unix(target) - unix(Date.now())
+    return formatHMS(time)
+  } 
