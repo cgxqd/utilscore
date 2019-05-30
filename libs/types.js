@@ -9,25 +9,25 @@ export const isNull = value => Object.prototype.toString.call(value) == "[object
  * 判断类型Undefined 
  * @param {any} value 
  */
-export const isUndefined = value => Object.prototype.toString.call(value) == "[object Undefined]"
+export const isUndefined = value => value === void 0
 
 /**
  * 判断类型Boolean
  * @param {any} value 
  */
-export const isBoolean = value => Object.prototype.toString.call(value) == "[object Boolean]"
+export const isBoolean = value => typeof(value) === 'boolean'
 
 /**
  * 判断类型Number
  * @param {any} value 
  */
-export const isNumber = value => Object.prototype.toString.call(value) == "[object Number]"
+export const isNumber = value => typeof(value) === 'number'
 
 /**
  * 判断类型String
  * @param {any} value 
  */
-export const isString = value => Object.prototype.toString.call(value) == "[object String]"
+export const isString = value => typeof(value) === 'string'
 
 /**
  * 判断类型Symbol
