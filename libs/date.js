@@ -77,13 +77,16 @@ export const formatTime = (obj, format) => {
    * 获取时间戳 (秒)
    * @param {any} value 
    */
-  export const unix = (value) => ~~ new Date(value).getTime().toString().substring(0,10)
+  export const unix = (value) => {
+    if(value===void 0) return unix(Date.now())
+    return Math.floor(new Date(value).getTime() / 1000);
+  }
 
   /**
    * 倒计时
    * @param {any} target 
    */
   export const countDown = (target=requered()) => {
-    let time = unix(target) - unix(Date.now())
+    let time = unix(target) - unix()
     return formatHMS(time)
   } 
