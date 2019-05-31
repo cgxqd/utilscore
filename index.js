@@ -32,7 +32,6 @@ var utilscore = {
     version:version,
 }
 
-root.utilscore = utilscore
 
 for(let key in utilscore){
 	exports[key] = utilscore[key]
