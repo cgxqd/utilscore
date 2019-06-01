@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "parcel index.js --no-source-maps",
-    "build": "parcel build index.js --global utilscore --no-source-maps"
+    "build": "parcel build index.js --global utilscore --no-source-maps --experimental-scope-hoisting"
   },
   "repository": {
     "type": "git",

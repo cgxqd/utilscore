@@ -9,9 +9,7 @@
 
 ## 安装使用
 
-> 注意：`dist`目录下的index.js 不支持CommonJS,ES模块规范
-
-1. 直接下载`dist`目录下的[index.js](https://github.com/cgxqd/utilscore/blob/master/dist/index.js)使用,支持UMD。
+1. 直接下载`dist`目录下的[index.js](https://github.com/cgxqd/utilscore/blob/master/dist/index.js)使用,支持UMD,CommonJS,ES6各模块化规范。
 2. 使用npm/yarn/cnpm安装,支持CommonJS,ES6各模块化规范。
 
 ### 浏览器:
@@ -41,7 +39,7 @@ React、VueJS,小程序等javascript环境
 
 ``` javascript
 // 完整引入
-import utilscore from 'utilscore'
+import utilscore from 'utilscore' // 或 import utilscore from 'utilscore/dist/index.js'
 let txt = utilscore.mask('12398765432',3,7) 
 console.log(txt) // => "123****5432"
 ```
@@ -50,7 +48,7 @@ console.log(txt) // => "123****5432"
 
 你真的不需要完整引入所有函数，所以只引入需要使用的方法即可。
 ``` javascript
-import { mask } from 'utilscore'
+import { mask } from 'utilscore' // 或 import { mask } from 'utilscore/dist/index.js'
 let txt = mask('12398765432',3,7) 
 console.log(txt) // => "123****5432"
 ```
