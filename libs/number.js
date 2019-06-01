@@ -139,8 +139,8 @@ export const shuffle = (arr) => {
 export const getrandom = (num, len) => {
   var arr = []
   while (arr.length < len - 1) {
-    let Average = Math.ceil(num / (len - arr.length))
-    let _num = Math.floor(randomNum(Average * 0.8, Average * 0.9))
+    let Average = Math.ceil(num / (len - arr.length -1))
+    let _num = Math.floor(randomNum(Average * 0.2, Average * 0.8))
     arr.push(_num)
     num = num - _num
   }
