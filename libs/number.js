@@ -60,7 +60,7 @@ export const addNum = (a, b) => {
   } catch (f) {
     d = 0;
   }
-  return e = Math.pow(10, Math.max(c, d)), (mul(a, e) + mul(b, e)) / e;
+  return e = Math.pow(10, Math.max(c, d)), (mulNum(a, e) + mulNum(b, e)) / e;
 }
 
 /**
@@ -80,7 +80,7 @@ export const subNum = (a, b) => {
   } catch (f) {
     d = 0;
   }
-  return e = Math.pow(10, Math.max(c, d)), (mul(a, e) - mul(b, e)) / e;
+  return e = Math.pow(10, Math.max(c, d)), (mulNum(a, e) - mulNum(b, e)) / e;
 }
 
 /**
@@ -115,5 +115,5 @@ export const divNum = (a, b) => {
   try {
     f = b.toString().split(".")[1].length;
   } catch (g) { }
-  return c = Number(a.toString().replace(".", "")), d = Number(b.toString().replace(".", "")), mul(c / d, Math.pow(10, f - e));
+  return c = Number(a.toString().replace(".", "")), d = Number(b.toString().replace(".", "")), mulNum(c / d, Math.pow(10, f - e));
 }
