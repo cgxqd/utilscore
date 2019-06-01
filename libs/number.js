@@ -47,6 +47,7 @@ export const toDecimalMark = (num, mark = '') => num.toLocaleString('en-US').rep
  * 加法运算
  * @param {Number} a 
  * @param {Number} b 
+ * @example utilscore.addNum(0.3 , 0.6) // => 0.9
  */
 export const addNum = (a, b) => {
   var c, d, e;
@@ -66,7 +67,8 @@ export const addNum = (a, b) => {
 /**
  * 减法运算
  * @param {Number} a 
- * @param {Number} b 
+ * @param {Number} b
+ * @example utilscore.subNum(0.3 , 0.2) // => 0.1 
  */
 export const subNum = (a, b) => {
   var c, d, e;
@@ -87,6 +89,7 @@ export const subNum = (a, b) => {
  * 乘法运算
  * @param {Number} a 
  * @param {Number} b 
+ * @example utilscore.mulNum(0.3 , 1.5) // => 0.45
  */
 export const mulNum = (a, b) => {
   var c = 0,
@@ -105,6 +108,7 @@ export const mulNum = (a, b) => {
  * 除法运算
  * @param {Number} a 
  * @param {Number} b 
+ * @example utilscore.divNum(0.3 , 0.1) // => 3
  */
 export const divNum = (a, b) => {
   var c, d, e = 0,

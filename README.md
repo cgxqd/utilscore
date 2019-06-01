@@ -99,6 +99,10 @@ console.log(txt) // => "123****5432"
 - sum 返回两个或两个以上数字/数字数组中元素之和。
 - sumBy 根据函数映射每个元素，然后返回数组的和。
 - toDecimalMark 将数字转化为千分位格式，将数字转化为千分位格式,可以在数字前面加上符号。
+- addNum 加法运算,可浮点安全运算。 
+- subNum 减法运算,可浮点安全运算。
+- mulNum 乘法运算,可浮点安全运算。
+- divNum 除法运算,可浮点安全运算。
 
 > ###  [TypeOf](https://github.com/cgxqd/utilscore/blob/master/libs/types.js)
 
