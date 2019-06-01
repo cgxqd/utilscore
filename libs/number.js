@@ -22,7 +22,7 @@ export const round = (n, decimals = 0) => {
  * @param  {...any} arr 操作的数组 
  * @example utilscore.sum(...[1,2,3,4,5]) // => 15
  */
-export const sum = (...arr) => [...arr].reduce((acc, val) => addNum(acc , val), 0);
+export const sum = (...arr) => [...arr].reduce((acc, val) => addNum(acc, val), 0);
 
 
 /**
@@ -32,7 +32,7 @@ export const sum = (...arr) => [...arr].reduce((acc, val) => addNum(acc , val), 
  * @example utilscore.sumBy([{num:1},{num:2},{num:3},{num:4},{num:5}],(row)=>row.num) // => 15
  */
 export const sumBy = (arr, fn) =>
-  arr.map(typeof fn === 'function' ? fn : val => val[fn]).reduce((acc, val) => addNum(acc , val), 0);
+  arr.map(typeof fn === 'function' ? fn : val => val[fn]).reduce((acc, val) => addNum(acc, val), 0);
 
 /**
  * 将数字转化为千分位格式,可以在数字前面加上符号
@@ -120,4 +120,30 @@ export const divNum = (a, b) => {
     f = b.toString().split(".")[1].length;
   } catch (g) { }
   return c = Number(a.toString().replace(".", "")), d = Number(b.toString().replace(".", "")), mulNum(c / d, Math.pow(10, f - e));
+}
+
+export const shuffle = (arr) => {
+  let i = arr.length;
+  while (i) {
+      let j = Math.floor(Math.random() * i--);
+      [arr[j], arr[i]] = [arr[i], arr[j]];
+  }
+  return arr
+}
+
+/**
+ * 实现产生n个随机数，并且随机数之和是固定值,简单版
+ * @param {number} num 随机数之和，固定值 
+ * @param {number} len 多少个随机数
+ */
+export const getrandom = (num, len) => {
+  var arr = []
+  while (arr.length < len - 1) {
+    let Average = Math.ceil(num / (len - arr.length))
+    let _num = Math.floor(randomNum(Average * 0.8, Average * 0.9))
+    arr.push(_num)
+    num = num - _num
+  }
+  arr.push(num)
+  return shuffle(arr)
 }
