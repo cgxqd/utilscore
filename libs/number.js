@@ -13,7 +13,7 @@ export const randomNum = (min, max) => Math.floor(Math.random() * (max - min + 1
  * @example utilscore.round(12.555,2) // => 12.56
  */
 export const round = (n, decimals = 0) => {
-    return Number(`${Math.round(`${n}e${decimals}`)}e-${decimals}`)
+  return Number(`${Math.round(`${n}e${decimals}`)}e-${decimals}`)
 }
 
 
@@ -41,4 +41,79 @@ export const sumBy = (arr, fn) =>
  * @returns {String}
  * @example utilscore.toDecimalMark(12345674654.123,'￥') // => "￥12,345,674,654.123"
  */
-export const toDecimalMark = (num,mark='') => num.toLocaleString('en-US').replace(/^/,mark);
+export const toDecimalMark = (num, mark = '') => num.toLocaleString('en-US').replace(/^/, mark);
+
+/**
+ * 加法运算
+ * @param {Number} a 
+ * @param {Number} b 
+ */
+export const addNum = (a, b) => {
+  var c, d, e;
+  try {
+    c = a.toString().split(".")[1].length;
+  } catch (f) {
+    c = 0;
+  }
+  try {
+    d = b.toString().split(".")[1].length;
+  } catch (f) {
+    d = 0;
+  }
+  return e = Math.pow(10, Math.max(c, d)), (mul(a, e) + mul(b, e)) / e;
+}
+
+/**
+ * 减法运算
+ * @param {Number} a 
+ * @param {Number} b 
+ */
+export const subNum = (a, b) => {
+  var c, d, e;
+  try {
+    c = a.toString().split(".")[1].length;
+  } catch (f) {
+    c = 0;
+  }
+  try {
+    d = b.toString().split(".")[1].length;
+  } catch (f) {
+    d = 0;
+  }
+  return e = Math.pow(10, Math.max(c, d)), (mul(a, e) - mul(b, e)) / e;
+}
+
+/**
+ * 乘法运算
+ * @param {Number} a 
+ * @param {Number} b 
+ */
+export const mulNum = (a, b) => {
+  var c = 0,
+    d = a.toString(),
+    e = b.toString();
+  try {
+    c += d.split(".")[1].length;
+  } catch (f) { }
+  try {
+    c += e.split(".")[1].length;
+  } catch (f) { }
+  return Number(d.replace(".", "")) * Number(e.replace(".", "")) / Math.pow(10, c);
+}
+
+/**
+ * 除法运算
+ * @param {Number} a 
+ * @param {Number} b 
+ */
+export const divNum = (a, b) => {
+  var c, d, e = 0,
+    f = 0;
+  try {
+    e = a.toString().split(".")[1].length;
+  } catch (g) { }
+  try {
+    f = b.toString().split(".")[1].length;
+  } catch (g) { }
+  return c = Number(a.toString().replace(".", "")), d = Number(b.toString().replace(".", "")), mul(c / d, Math.pow(10, f - e));
+}
