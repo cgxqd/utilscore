@@ -69,6 +69,7 @@ console.log(txt) // => "123****5432"
 - minNumBy 	找出数组中该属性最小值的一列。
 - maxNum 	数组中的最大值。
 - mixNum 	数组中的最小值。
+- shuffle 	将数组打乱
 
 > ###  [Date](https://github.com/cgxqd/utilscore/blob/master/libs/date.js)
 
@@ -103,6 +104,7 @@ console.log(txt) // => "123****5432"
 - subNum 减法运算,可浮点安全运算。
 - mulNum 乘法运算,可浮点安全运算。
 - divNum 除法运算,可浮点安全运算。
+- getrandom 产生n个随机数,并且随机数之和是固定值
 
 > ###  [TypeOf](https://github.com/cgxqd/utilscore/blob/master/libs/types.js)
 

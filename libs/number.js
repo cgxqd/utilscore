@@ -1,3 +1,4 @@
+import {shuffle} from './array'
 /**
  * 返回指定范围内的随机整数。
  * @param {number} min 最小值
@@ -120,15 +121,6 @@ export const divNum = (a, b) => {
     f = b.toString().split(".")[1].length;
   } catch (g) { }
   return c = Number(a.toString().replace(".", "")), d = Number(b.toString().replace(".", "")), mulNum(c / d, Math.pow(10, f - e));
-}
-
-export const shuffle = (arr) => {
-  let i = arr.length;
-  while (i) {
-      let j = Math.floor(Math.random() * i--);
-      [arr[j], arr[i]] = [arr[i], arr[j]];
-  }
-  return arr
 }
 
 /**
