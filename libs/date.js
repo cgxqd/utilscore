@@ -7,49 +7,24 @@ export const requered = (key='') => {
 }
 /**
  * 格式化时间
- * @param {*} obj 
- * @param {*} format 
- * @example utilscore.formatTime(new Date(),'yyyy-M-d h:m:s D') // => 2019-05-10 17:37:24 星期六
+ * @param {any} value 
+ * @param {String} format 
+ * @example utilscore.formatTime('2019/06/04 12:45:32','YYYY~MM~DD hh~mm~ss 星期W  季度Q') // => "2019~06~04 12~45~32 星期二  季度2"
  */
-export const formatTime = (obj, format) => {
-    if (format) {
-      var date;
-      if (obj instanceof Date) {
-        date = obj;
-      } else {
-        date = new Date(obj);
-      }
-      var dayNames = ['星期一', '星期二', '星期三', '星期四', '星期五', '星期六', '星期日',]
-
-      var o = {
-        'M+': date.getMonth() < 9 ? "0" + (date.getMonth() + 1) : (date.getMonth() + 1), // 月份
-        'd+': date.getDate() < 10 ? "0" + date.getDate() : date.getDate(), // 日
-        'h+': date.getHours(), // 小时
-        'm+': date.getMinutes(), // 分
-        's+': date.getSeconds() < 10 ? "0" + date.getSeconds() : date.getSeconds(), // 秒
-        'q+': Math.floor((date.getMonth() + 3) / 3), // 季度
-        'S+': date.getMilliseconds(), // 毫秒
-        'D+': dayNames[date.getDay()], //星期
-      };
-
-      if (/(y+)/.test(format)) format = format.replace(RegExp.$1, (`${date.getFullYear()}`).substr(4 - RegExp.$1.length));
-      for (var k in o) {
-        if (new RegExp(`(${k})`).test(format)) {
-          format = format.replace(RegExp.$1, (RegExp.$1.length === 1) ? (o[k]) : ((`
-00${o[k]}`).substr((`${o[k]}`).length)));
-        }
-      }
-      return format;
-    } else {
-      let date = new Date(obj)
-      let _year = date.getFullYear(),
-        _month = (date.getMonth() + 1) > 9 ? (date.getMonth() + 1) : '0' + (date.getMonth() + 1),
-        _date = date.getDate(),
-        _hour = date.getHours(),
-        _minute = date.getMinutes(),
-        _second = date.getSeconds()
-      return _year + '-' + _month + '-' + _date + ' ' + _hour + ':' + _minute + ':' + _second
-    }
+export const formatTime = (value, format) => {
+  let nowDate = new Date(value)
+  let weeks = ['日', '一', '二', '三', '四', '五', '六']
+  let time = (new Date(+nowDate + 8 * 3600 * 1000)).toISOString().substr(0, 19).replace(/[a-z]/i, ' ');
+  let [_, YYYY, MM, DD, hh, mm, ss] = /(\d{4})-(\d{2})-(\d{2}) (\d{2}):(\d{2}):(\d{2})/g.exec(time)
+  var filterTime = (type, _) => type.slice(0, _.length)
+  return format.replace(/(Y{1,4})/g, ($1) => filterTime(YYYY, $1))
+    .replace(/(M{1,2})/g, ($1) => filterTime(MM, $1))
+    .replace(/(D{1,2})/g, ($1) => filterTime(DD, $1))
+    .replace(/(h{1,2})/g, ($1) => filterTime(hh, $1))
+    .replace(/(m{1,2})/g, ($1) => filterTime(mm, $1))
+    .replace(/(s{1,2})/g, ($1) => filterTime(ss, $1))
+    .replace(/(W{1})/g, ($1) => weeks[nowDate.getDay()])
+    .replace(/(Q{1})/g, ($1) => Math.floor((nowDate.getMonth() + 3) / 3))
   }
 
 
