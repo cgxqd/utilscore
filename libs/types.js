@@ -65,3 +65,15 @@ export const isFunction = value => Object.prototype.toString.call(value) == "[ob
  * @example utilscore.getType(null) // => "null"
  */
 export const getType = (value) => Object.prototype.toString.call(value).match(/\s([a-z]+)/i)[1].toLocaleLowerCase()
+
+/**
+ * 判断元素是否为空
+ * @param {any} value 
+ */
+export const isEmpty = (value) => {
+	if(value === void(0) || value === null) return true
+    else if(isObject(value)) return !Object.keys(value).length
+    else if(isArray(value)) return !value.length
+    else if(isString(value)) return !value
+	else return value.toString().length == 0
+};
