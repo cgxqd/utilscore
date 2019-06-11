@@ -5,17 +5,20 @@
 
 > 目的：高效率完成前端业务代码
 
-业务开发过程中，会经常用到`String,Number,Array,Object,Function,Date扩展方法`、`浏览器类型判断`、`base64`、`表单验证`、`url常用方法`等常用函数，为避免不同项目多次复制粘贴的麻烦，这里统一封装，并发布到npm，以提高开发效率。如果你也有常用的代码，欢迎为本项目提交pr.
+业务开发过程中，会经常用到`String,Number,Array,Object,Function,Date,prototype扩展方法`、`base64`、`表单验证`、`url`、`事件订阅`等常用函数，为避免不同项目多次复制粘贴的麻烦，这里统一封装，并发布到npm，以提高开发效率。如果你也有常用的代码，欢迎为本项目提交pr.
 
 ## 安装使用
 
-1. 直接下载`dist`目录下的[index.js](https://github.com/cgxqd/utilscore/blob/master/dist/index.js)使用,支持UMD,CommonJS,ES6各模块化规范。
+1. 直接下载`dist`目录下的[index.js](https://raw.githack.com/cgxqd/utilscore/master/dist/index.js)使用,支持CDN,UMD,CommonJS,ES6各模块化规范。
 2. 使用npm/yarn/cnpm安装,支持CommonJS,ES6各模块化规范。
 
 ### 浏览器:
 ``` html
-<script src="./node_modules/utilscore/dist/index.js"></script>
-<!-- <script src="./dist/index.js"></script> -->
+<!-- cdn 体验最新版 -->
+<script src="https://raw.githack.com/cgxqd/utilscore/master/dist/index.js"></script>
+
+<!-- 引入 node_modules/utils/dist 下的 index.js -->
+<!-- <script src="./node_modules/utilscore/dist/index.js"></script> -->
 <script>
 	let txt = utilscore.mask('12398765432',3,7) 
 	console.log(txt) // => "123****5432"
@@ -99,7 +102,7 @@ console.log(txt) // => "123****5432"
 - round 将数字四舍五入到指定的小数位数。
 - sum 返回两个或两个以上数字/数字数组中元素之和。
 - sumBy 根据函数映射每个元素，然后返回数组的和。
-- toDecimalMark 将数字转化为千分位格式，将数字转化为千分位格式,可以在数字前面加上符号。
+- toDecimalMark 将数字转化为千分位格式，可以在数字前面加上符号。
 - addNum 加法运算,可浮点安全运算。 
 - subNum 减法运算,可浮点安全运算。
 - mulNum 乘法运算,可浮点安全运算。
