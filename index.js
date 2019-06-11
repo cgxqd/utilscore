@@ -10,6 +10,7 @@ import * as date from './libs/date'
 import * as other from './libs/other'
 import * as validator from './libs/validator'
 import * as base64 from './libs/base64'
+import * as event from './libs/event'
 import './libs/prototype'
 
 var utilscore = {
@@ -24,6 +25,7 @@ var utilscore = {
     ...other,
     ...validator,
     ...base64,
+    ...event,
     version:version,
 }
 

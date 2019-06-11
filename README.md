@@ -59,7 +59,7 @@ console.log(txt) // => "123****5432"
 - deepClone 深度克隆。
 - orderBy 	返回按属性(props)和顺序(orders)排序的对象数组,用于数据排序。
 - findPathByLeafId 根据 key 递归查找链带关系。
-- merge 对象合并
+- merge 对象合并。
 
 > ###  [Array](https://github.com/cgxqd/utilscore/blob/master/libs/array.js)
 
@@ -69,7 +69,7 @@ console.log(txt) // => "123****5432"
 - minNumBy 	找出数组中该属性最小值的一列。
 - maxNum 	数组中的最大值。
 - mixNum 	数组中的最小值。
-- shuffle 	将数组打乱
+- shuffle 	将数组打乱。
 
 > ###  [Date](https://github.com/cgxqd/utilscore/blob/master/libs/date.js)
 
@@ -81,7 +81,7 @@ console.log(txt) // => "123****5432"
 - debounceStart 函数防抖 (立即执行版)。
 - debounceEnd 函数防抖 (非立即执行版)。
 - debounce 函数防抖 (完全版)。
-- throttle 函数节流
+- throttle 函数节流。
 
 > ###  [String](https://github.com/cgxqd/utilscore/blob/master/libs/string.js)
 
@@ -118,6 +118,7 @@ console.log(txt) // => "123****5432"
 - isRegExp 判断类型RegExp。
 - isArray 判断类型Array。
 - isFunction 判断类型Function。
+- isEmpty 判断元素是否为空。
 - getType 获取类型，全能型的typeOf。
 
 > ###  [url](https://github.com/cgxqd/utilscore/blob/master/libs/url.js)
@@ -138,6 +139,15 @@ console.log(txt) // => "123****5432"
 > ###  [prototype](https://github.com/cgxqd/utilscore/blob/master/libs/prototype.js)
 
 - match_all 扩展 String 的原型方法 es10 的 matchAll（未兼容浏览器）。
-- fromEntries 扩展 es10 的 Object.fromEntries() 
-- entries 扩展 es 的 Object.entries() 
+- fromEntries 扩展 es10 的 Object.fromEntries() 。
+- entries 扩展 es 的 Object.entries() 。
+
+> ###  [EventEmitter](https://github.com/cgxqd/utilscore/blob/master/libs/event.js)
+
+- on 		为指定事件注册一个监听器。
+- once 		为指定事件注册一个单次监听器。
+- emit 		触发指定事件的监听器。
+- off		移除指定事件的监听器。
+- allOff	移除所有事件的所有监听器，如果指定事件，则移除指定事件的所有监听器。
+
 
