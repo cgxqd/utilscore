@@ -47,8 +47,6 @@ React、VueJS,小程序等javascript环境
 // 完整引入
 import utilscore from 'utilscore' // 或 import utilscore from 'utilscore/dist/index.js'
 
-// 不需要下载依赖,引入远程链接
-// import utilsocre from 'https://raw.githack.com/cgxqd/utilscore/master/dist/index.js'
 
 // 引入原型扩展
 import 'utilscore/libs/prototype.js'
@@ -62,9 +60,6 @@ console.log(txt) // => "123****5432"
 你真的不需要完整引入所有函数，所以只引入需要使用的方法即可。
 ``` javascript
 import { mask } from 'utilscore' // 或 import { mask } from 'utilscore/dist/index.js'
-
-// 或者你只是想尝试其中某些功能，引入远程链接
-// import {mask} from 'https://raw.githack.com/cgxqd/utilscore/master/dist/index.js'
 
 let txt = mask('12398765432',3,7) 
 console.log(txt) // => "123****5432"
