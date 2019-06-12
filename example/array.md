@@ -16,7 +16,7 @@ utilscore.uniqueBy(arr,'name')  // => [{name:'1111'},{name:'222'},{name:'333'}
 
 const arr = [1,2,2,3,4,3,4,7]
 
-utilscore.unique() // => [1, 2, 3, 4, 7]
+utilscore.unique(arr) // => [1, 2, 3, 4, 7]
 
 ```
 
@@ -46,7 +46,7 @@ utilscore.minNumBy(arr,'num') // =>  {num: 41}
 
 const arr = [12,3,31,5,3];
 
-utilsocre.maxNum(arr) // => 31 
+utilscore.maxNum(arr) // => 31 
 
 ```
 
@@ -54,16 +54,16 @@ utilsocre.maxNum(arr) // => 31
 
 ```javascript
 
-cosnt arr = [12,3,31,5,3]
+const arr = [12,3,31,5,3]
 
-utilsocre.minNum(arr) // => 3 
+utilscore.minNum(arr) // => 3 
 
 ```
 
 ### `shuffle` 将数组打乱
 ```javascript
 
-const arr = arr = [1,2,3,4,5,6,7,8,9]
+const arr = [1,2,3,4,5,6,7,8,9]
 
 utilscore.shuffle(arr) //=> [9, 6, 5, 1, 8, 2, 3, 7, 4]
 

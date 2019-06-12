@@ -14,8 +14,8 @@ export const uniqueBy = function (arr, key) {
  * @param {array} arr 去重的数组
  * @example utilscore.unique([1,2,2,3,4,3,4,7]) => [1, 2, 3, 4, 7]
  */
-export const unique = (arr) =>
-    arr.filter((element, index, array) => array.indexOf(element) === index)
+export const unique = (arr) => arr.filter((element, index, array) => array.indexOf(element) === index)
+    
 
 
 /**
@@ -41,7 +41,7 @@ export const minNumBy = (arr, key) =>
 /**
  * 数组中的最大值
  * @param {array} arr
- * @example utilsocre.maxNum([12,3,31,5,3]) // => 31 
+ * @example utilscore.maxNum([12,3,31,5,3]) // => 31 
  */
 export const maxNum = (arr) =>
     Math.max.apply(Math, arr)
@@ -50,7 +50,7 @@ export const maxNum = (arr) =>
 /**
  * 数组中的最小值
  * @param {array} arr 
- * @example utilsocre.minNum([12,3,31,5,3]) // => 3 
+ * @example utilscore.minNum([12,3,31,5,3]) // => 3 
  */
 export const minNum = (arr) =>
     Math.min.apply(Math, arr)
