@@ -1,6 +1,6 @@
 
 
-## array 对象方法
+## object 对象方法
 
 ### `deepClone` 深度克隆
 
