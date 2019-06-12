@@ -73,7 +73,7 @@ console.log(txt) // => "123****5432"
 - findPathByLeafId 根据 key 递归查找链带关系。
 - merge 对象合并。
 
-> ###  [Array](https://github.com/cgxqd/utilscore/blob/master/libs/array.js)	<u>[示例](https://github.com/cgxqd/utilscore/blob/master/example/array.md)</u> 
+> ###  [Array](https://github.com/cgxqd/utilscore/blob/master/libs/array.js)	<font size=3><sub>[示例](https://github.com/cgxqd/utilscore/blob/master/example/array.md)</sub></font>
 
 - uniqueBy 	根据属性去重数组。
 - unique	普通数组去重。
