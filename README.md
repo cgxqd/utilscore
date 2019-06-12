@@ -66,7 +66,7 @@ console.log(txt) // => "123****5432"
 ```
 ## :package:  API文档
 
-> ###  [Object](https://github.com/cgxqd/utilscore/blob/master/libs/object.js)
+> ###  [Object](https://github.com/cgxqd/utilscore/blob/master/libs/object.js)	<font size=3><sub>[示例](https://github.com/cgxqd/utilscore/blob/master/example/object.md)</sub></font>
 
 - deepClone 深度克隆。
 - orderBy 	返回按属性(props)和顺序(orders)排序的对象数组,用于数据排序。
