@@ -3,15 +3,17 @@
  * @param {function} fn 函数
  * @param {number} delay 延迟执行毫秒数
  */
-export const  debounceStart = function (fn,delay=3000){
+export const debounceStart = function (fn, delay = 3000) {
 	let timer = null;
 	let status = true;
-	clearTimeout(timer);
-	if(status){
-		status = false;
-		fn.call(this,arguments);
+	return function () {
+		clearTimeout(timer);
+		if (status) {
+			status = false;
+			fn.call(this, arguments);
+		}
+		timer = setTimeout(() => status = true, delay);
 	}
-	timer = setTimeout(()=>status = true, delay);
 }
 
 
@@ -20,14 +22,14 @@ export const  debounceStart = function (fn,delay=3000){
  * @param {function} fn 函数
  * @param {number} delay 延迟执行毫秒数
  */
-export const debounceEnd = (fn,delay) => {
+export const debounceEnd = (fn, delay) => {
 	let timer = null;
-	return function() {
+	return function () {
 		let args = arguments;
-		if(timer) clearTimeout(timer)
-		timer = setTimeout(()=>{
-			fn.apply(this,args)
-		},delay)
+		if (timer) clearTimeout(timer)
+		timer = setTimeout(() => {
+			fn.apply(this, args)
+		}, delay)
 	}
 }
 
@@ -38,21 +40,21 @@ export const debounceEnd = (fn,delay) => {
  * @param {number} delay 延迟执行毫秒数
  * @param {boolean} immediate true 表立即执行，false 表非立即执行
  */
-export const debounce = (fn,delay,immediate = false) => {
+export const debounce = (fn, delay, immediate = false) => {
 	let timer = null;
 	let status = true;
-	if(!immediate) return function() {
+	if (!immediate) return function () {
 		let args = arguments;
-		if(timer) clearTimeout(timer)
-		timer = setTimeout(()=>fn.apply(this,args),delay)
+		if (timer) clearTimeout(timer)
+		timer = setTimeout(() => fn.apply(this, args), delay)
 	}
-	else return function(){
+	else return function () {
 		clearTimeout(timer);
-		if(status){
+		if (status) {
 			status = false;
-			fn.call(this,arguments);
+			fn.call(this, arguments);
 		}
-		timer = setTimeout(()=>status = true, delay);
+		timer = setTimeout(() => status = true, delay);
 	}
 }
 
@@ -62,17 +64,17 @@ export const debounce = (fn,delay,immediate = false) => {
  * @param {function} fn 函数
  * @param {number} delay 延迟执行毫秒数
  */
-export const throttle = (fn,delay) => {
+export const throttle = (fn, delay) => {
 	let timer = null;
-    return function() {
-        let args = arguments;
-        if (!timer) {
-            timer = setTimeout(() => {
-                timer = null;
-                fn.apply(this, args)
-            }, delay)
-        }
+	return function () {
+		let args = arguments;
+		if (!timer) {
+			timer = setTimeout(() => {
+				timer = null;
+				fn.apply(this, args)
+			}, delay)
+		}
 
-    }
+	}
 }
 
