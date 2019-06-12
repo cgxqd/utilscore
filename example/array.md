@@ -1,0 +1,70 @@
+## array 数组方法
+
+### `uniqueBy` 根据属性去重数组
+
+```javascript
+
+const arr = [{name:'1111'},{name:'1111'},{name:'222'},{name:'333'}]
+
+utilscore.uniqueBy(arr,'name')  // => [{name:'1111'},{name:'222'},{name:'333'}
+
+```
+
+### `unique` 普通数组去重
+
+```javascript
+
+const arr = [1,2,2,3,4,3,4,7]
+
+utilscore.unique() // => [1, 2, 3, 4, 7]
+
+```
+
+### `maxNumBy` 找出数组中该属性最大值的一列
+
+```javascript
+
+const arr = [{num:55},{num:541},{num:41}];
+
+utilscore.maxNumBy(arr,'num') // => {num: 541}
+
+```
+
+### `minNumBy` 找出数组中该属性最小值的一列
+
+```javascript
+
+const arr = [{num:55},{num:541},{num:41}]
+
+utilscore.minNumBy(arr,'num') // =>  {num: 41}
+
+```
+
+### `maxNum` 数组中的最大值
+
+```javascript
+
+const arr = [12,3,31,5,3];
+
+utilsocre.maxNum(arr) // => 31 
+
+```
+
+### `minNum` 数组中的最小值
+
+```javascript
+
+cosnt arr = [12,3,31,5,3]
+
+utilsocre.minNum(arr) // => 3 
+
+```
+
+### `shuffle` 将数组打乱
+```javascript
+
+const arr = arr = [1,2,3,4,5,6,7,8,9]
+
+utilscore.shuffle(arr) //=> [9, 6, 5, 1, 8, 2, 3, 7, 4]
+
+```
