@@ -83,19 +83,19 @@ console.log(txt) // => "123****5432"
 - mixNum 	数组中的最小值。
 - shuffle 	将数组打乱。
 
-> ###  [Date](https://github.com/cgxqd/utilscore/blob/master/libs/date.js)
+> ###  [Date](https://github.com/cgxqd/utilscore/blob/master/libs/date.js)	<font size=3><sub>[示例](https://github.com/cgxqd/utilscore/blob/master/example/date.md)</sub></font>
 
 - formatTime 格式化时间。
 - formatHMS 将秒数转为 xx小时xx分钟xx秒 例如1h0m10s。
 
-> ###  [Function](https://github.com/cgxqd/utilscore/blob/master/libs/function.js)
+> ###  [Function](https://github.com/cgxqd/utilscore/blob/master/libs/function.js)	<font size=3><sub>[示例](https://github.com/cgxqd/utilscore/blob/master/example/function.md)</sub></font>
 
 - debounceStart 函数防抖 (立即执行版)。
 - debounceEnd 函数防抖 (非立即执行版)。
 - debounce 函数防抖 (完全版)。
 - throttle 函数节流。
 
-> ###  [String](https://github.com/cgxqd/utilscore/blob/master/libs/string.js)
+> ###  [String](https://github.com/cgxqd/utilscore/blob/master/libs/string.js)	<font size=3><sub>[示例](https://github.com/cgxqd/utilscore/blob/master/example/string.md)</sub></font>
 
 - mask 根据位置,使用 * 遮蔽字符串。
 - maskLeft 从位置左边开始，使用 * 遮蔽字符串。
@@ -105,7 +105,7 @@ console.log(txt) // => "123****5432"
 - uuid 全局唯一标识符 UUID
 - guid GUID:128位的数字标识符
 
-> ###  [Number](https://github.com/cgxqd/utilscore/blob/master/libs/number.js)
+> ###  [Number](https://github.com/cgxqd/utilscore/blob/master/libs/number.js)	<font size=3><sub>[示例](https://github.com/cgxqd/utilscore/blob/master/example/number.md)</sub></font>
 
 - randomNum 返回指定范围内的随机整数。
 - round 将数字四舍五入到指定的小数位数。
@@ -118,7 +118,7 @@ console.log(txt) // => "123****5432"
 - divNum 除法运算,可浮点安全运算。
 - getrandom 产生n个随机数,并且随机数之和是固定值
 
-> ###  [TypeOf](https://github.com/cgxqd/utilscore/blob/master/libs/types.js)
+> ###  [TypeOf](https://github.com/cgxqd/utilscore/blob/master/libs/types.js)	<font size=3><sub>[示例](https://github.com/cgxqd/utilscore/blob/master/example/types.md)</sub></font>
 
 - isNull 判断类型Null。
 - isUndefined 判断类型Undefined。
@@ -133,33 +133,33 @@ console.log(txt) // => "123****5432"
 - isEmpty 判断元素是否为空。
 - getType 获取类型，全能型的typeOf。
 
-> ###  [url](https://github.com/cgxqd/utilscore/blob/master/libs/url.js)
+> ###  [url](https://github.com/cgxqd/utilscore/blob/master/libs/url.js)	<font size=3><sub>[示例](https://github.com/cgxqd/utilscore/blob/master/example/url.md)</sub></font>
 
 - insertUrl 根据对象中的参数匹配插入到url中。
 - URLSearchParams url 序列化和反序列化。
 - Url 返回网址的相关信息，模拟了 浏览器的 new URL(urlString) 部分功能
 
-> ###  [validator](https://github.com/cgxqd/utilscore/blob/master/libs/graceChecker.js)
+> ###  [validator](https://github.com/cgxqd/utilscore/blob/master/libs/validator.js)	<font size=3><sub>[示例](https://github.com/cgxqd/utilscore/blob/master/example/validator.md)</sub></font>
 
 - graceChecker 表单验证。
 
-> ###  [base64](https://github.com/cgxqd/utilscore/blob/master/libs/base64.js)
+> ###  [base64](https://github.com/cgxqd/utilscore/blob/master/libs/base64.js)	<font size=3><sub>[示例](https://github.com/cgxqd/utilscore/blob/master/example/base64.md)</sub></font>
 
 - encode base64加密。
 - decode base64解密。
 
-> ###  [prototype](https://github.com/cgxqd/utilscore/blob/master/libs/prototype.js)
-
-- match_all 扩展 String 的原型方法 es10 的 matchAll（未兼容浏览器）。
-- fromEntries 扩展 es10 的 Object.fromEntries() 。
-- entries 扩展 es 的 Object.entries() 。
-
-> ###  [EventEmitter](https://github.com/cgxqd/utilscore/blob/master/libs/event.js)
+> ###  [EventEmitter](https://github.com/cgxqd/utilscore/blob/master/libs/event.js)	<font size=3><sub>[示例](https://github.com/cgxqd/utilscore/blob/master/example/event.md)</sub></font>
 
 - on 		为指定事件注册一个监听器。
 - once 		为指定事件注册一个单次监听器。
 - emit 		触发指定事件的监听器。
 - off		移除指定事件的监听器。
 - allOff	移除所有事件的所有监听器，如果指定事件，则移除指定事件的所有监听器。
+
+> ###  [prototype](https://github.com/cgxqd/utilscore/blob/master/libs/prototype.js)
+
+- match_all 扩展 String 的原型方法 es10 的 matchAll（未兼容浏览器）。
+- fromEntries 扩展 es10 的 Object.fromEntries() 。
+- entries 扩展 es 的 Object.entries() 。
 
 
