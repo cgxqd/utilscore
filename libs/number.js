@@ -20,8 +20,8 @@ export const round = (n, decimals = 0) => {
 
 /**
  * 返回两个或两个以上数字/数字数组中元素之和。
- * @param  {...any} arr 操作的数组 
- * @example utilscore.sum(...[1,2,3,4,5]) // => 15
+ * @param  {Array} arr 操作的数组 
+ * @example utilscore.sum([1,2,3,4,5]) // => 15
  */
 export const sum = (arr) => sumBy(arr,row=>row)
 
