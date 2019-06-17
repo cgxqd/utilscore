@@ -4,9 +4,28 @@
 
 ```javascript
 
-const arr = [{name:'1111'},{name:'1111'},{name:'222'},{name:'333'}]
+const arr = [
+    { name: '1111', user: { name: 'aaa' } },
+    { name: '1111', user: { name: 'ccc' } },
+    { name: '222', user: { name: 'aaa' } },
+    { name: '333', user: { name: 'ddd' } }
+]
 
-utilscore.uniqueBy(arr,'name')  // => [{name:'1111'},{name:'222'},{name:'333'}
+utilscore.uniqueBy(arr,'name')  
+// => 
+// "[
+//   {"name": "1111","user": { "name": "aaa"}},
+//   {"name": "222","user": { "name": "aaa"}},
+//   {"name": "333","user": {"name": "ddd"}}
+// ]"
+
+utilscore.uniqueBy(arr,row=>row.user.name)
+// =>
+// "[
+// 	{"name":"1111","user":{"name":"aaa"}},
+// 	{"name":"1111","user":{"name":"ccc"}},
+// 	{"name":"333","user":{"name":"ddd"}}
+// ]"
 
 ```
 

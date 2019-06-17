@@ -4,8 +4,10 @@
  * @param {string} key 去重的key
  * @example utilscore.uniqueBy([{name:'1111'},{name:'1111'},{name:'222'},{name:'333'}],'name') => [{name:'1111'},{name:'222'},{name:'333'}
  */
-export const uniqueBy = function (arr, key) {
-    return arr.filter((element, index, array) => array.findIndex(row => row[key] === element[key]) === index)
+export const uniqueBy = function (arr, fn) {
+    return arr.filter((element, index, array) => array.findIndex(row => {
+        return typeof(fn) === 'function'?(fn.call(this,row) === fn.call(this,element)):(row[fn]===element[fn])
+    }) === index)
 }
 
 
@@ -14,7 +16,7 @@ export const uniqueBy = function (arr, key) {
  * @param {array} arr 去重的数组
  * @example utilscore.unique([1,2,2,3,4,3,4,7]) => [1, 2, 3, 4, 7]
  */
-export const unique = (arr) => arr.filter((element, index, array) => array.indexOf(element) === index)
+export const unique = (arr) => uniqueBy(arr,row=>row)
     
 
 

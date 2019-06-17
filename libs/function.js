@@ -3,18 +3,7 @@
  * @param {function} fn 函数
  * @param {number} delay 延迟执行毫秒数
  */
-export const debounceStart = function (fn, delay = 3000) {
-	let timer = null;
-	let status = true;
-	return function () {
-		clearTimeout(timer);
-		if (status) {
-			status = false;
-			fn.call(this, arguments);
-		}
-		timer = setTimeout(() => status = true, delay);
-	}
-}
+export const debounceStart = (fn, delay = 2000) => debounce(fn,delay,true)
 
 
 /**
@@ -22,16 +11,7 @@ export const debounceStart = function (fn, delay = 3000) {
  * @param {function} fn 函数
  * @param {number} delay 延迟执行毫秒数
  */
-export const debounceEnd = (fn, delay) => {
-	let timer = null;
-	return function () {
-		let args = arguments;
-		if (timer) clearTimeout(timer)
-		timer = setTimeout(() => {
-			fn.apply(this, args)
-		}, delay)
-	}
-}
+export const debounceEnd = (fn, delay = 2000) => debounce(fn,delay,false)
 
 
 /**

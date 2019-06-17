@@ -23,7 +23,7 @@ export const round = (n, decimals = 0) => {
  * @param  {...any} arr 操作的数组 
  * @example utilscore.sum(...[1,2,3,4,5]) // => 15
  */
-export const sum = (...arr) => [...arr].reduce((acc, val) => addNum(acc, val), 0);
+export const sum = (arr) => sumBy(arr,row=>row)
 
 
 /**

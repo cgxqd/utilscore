@@ -47,18 +47,22 @@ export const URLSearchParams = (param) => {
         return Object.keys(param).map(key => `${key}=${encodeURIComponent(JSON.stringify(param[key]))}`).join('&')
     } else if (isString(param)) {
         let maps = {};
-        let _params = param.match(/(([\w%~!*\(\)\-.']+)\=([\w%~!*\(\)\-.']+)?)/ig)
+        let _params = param.match(/(([^&?]+)=([^&]*)?)/ig)
         _params && _params.forEach(res => {
             let row = decodeURIComponent(res).split('=');
             try {
                 maps[row[0]] = JSON.parse(decodeURIComponent(row[1]))
             } catch (err) {
-                try{
+                try {
                     maps[row[0]] = decodeURIComponent(row[1])
                 }
                 //特殊字符情况
-                catch(err){ 
-                    maps[row[0]] = row[1]
+                catch (err) {
+                    try {
+                        maps[row[0]] = JSON.parse(row[1])
+                    }catch(err){
+                        maps[row[0]] = row[1]
+                    }
                 }
             }
         })
@@ -87,8 +91,8 @@ export const URLSearchParams = (param) => {
  */
 export const Url = (urlString) => {
     try {
-        let [href, origin ,protocol,host,hostname,portName,port,pathname,searchName,search,hash ] = /((http:|https:)\/\/(([\w.\-]+)(\:(\d+))?))([\w\/\-]+)?((\?[^#]+)(.+)?)?/ig.exec(urlString)
-        return {hash,host,hostname,href,origin,pathname,port,protocol,search}
+        let [href, origin, protocol, host, hostname, portName, port, pathname, searchName, search, hash] = /((http:|https:)\/\/(([\w.\-]+)(\:(\d+))?))([\w\/\-]+)?((\?[^#]+)(.+)?)?/ig.exec(urlString)
+        return { hash, host, hostname, href, origin, pathname, port, protocol, search }
     } catch (err) {
         console.error(`Raises a SYNTAX ERROR exception as 'about:blank/${urlString}' is not valid`)
     }
