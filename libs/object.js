@@ -2,27 +2,18 @@ import {isObject} from './types'
 
 /**
  * 深度克隆
- * @param {*} obj 
+ * @param {any} _obj 
  */
-export const deepClone = (obj) => {
-    if(null === obj){
-        return obj;
-    }
-    if(obj instanceof Array){
-        return obj.map(row => deepClone(row));
-    }
-    if(obj instanceof Object){
-        let ret = {};
-        Object.keys(obj).forEach(key =>{
-            if(obj[key] instanceof Date){
-                ret[key] = new Date(obj[key].getTime());
-            } else {
-                ret[key] = deepClone(obj[key]);
-            }
-        });
-        return ret;
-    }
-    return obj;
+export const deepClone = (_obj) => {
+    if(_obj instanceof Array) return _obj.map(row=>deepClone(row))
+	if(isObject(_obj)){
+		let ret = {}
+		for(let k in _obj){
+			ret[k] = deepClone(_obj[k])
+		}
+		return ret
+	}
+	return _obj
 };
 
 
