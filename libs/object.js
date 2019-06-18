@@ -121,3 +121,18 @@ export const merge = (a,b) => {
     }
     return a;
 }
+
+/**
+ * 从对象中检索出给定选择器指定的一组属性
+ * @param {Object|Array} from 
+ * @param {string} selectors 
+ * @param {string} keys
+ */
+export const selector = (from,selectors,keys = null) => {
+	keys = keys || selectors.match(/([\w]+)/g);
+	if(!!keys && !!keys.length && !!from){
+		let key = keys.splice(0,1)
+		let value = from[key]
+		return selector(value,selectors,keys)
+	}else return from
+}

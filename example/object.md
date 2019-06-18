@@ -81,3 +81,23 @@ const b = {
 utilscore.merge(a,b)    // => {"a":11,"o":{"b":22,"d":44},"c":33}
 ```
 
+### `selector` 从对象中检索出给定选择器指定的一组属性
+```javascript
+const obj = {
+    a: "111",
+    o: {
+        b: "222",
+        c: {
+			arr:['aaaa','bbbbb','ccccc',['dddd',['eeee']]],
+            d: "333",
+            f: function() {
+                console.log("ffff");
+            }
+        }
+    }
+};
+utilscore.selector(obj,'o.c.arr[3][1]')     // => "eeee"
+utilscore.selector(obj,'o.c.d')             // => "333"
+```
+
+
