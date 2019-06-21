@@ -83,6 +83,8 @@ console.log(txt) // => "123****5432"
 - maxNum 	数组中的最大值。
 - mixNum 	数组中的最小值。
 - shuffle 	将数组打乱。
+- convert	扁平化数组 ==> 树形结构。
+- convertFlat 树形结构 ==> 扁平化。
 
 > ###  [Date](https://github.com/cgxqd/utilscore/blob/master/libs/date.js)	<font size=3><sub>[示例](https://github.com/cgxqd/utilscore/blob/master/example/date.md)</sub></font>
 

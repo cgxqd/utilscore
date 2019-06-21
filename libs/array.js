@@ -6,7 +6,7 @@
  */
 export const uniqueBy = function (arr, fn) {
     return arr.filter((element, index, array) => array.findIndex(row => {
-        return typeof(fn) === 'function'?(fn.call(this,row) === fn.call(this,element)):(row[fn]===element[fn])
+        return typeof (fn) === 'function' ? (fn.call(this, row) === fn.call(this, element)) : (row[fn] === element[fn])
     }) === index)
 }
 
@@ -16,8 +16,8 @@ export const uniqueBy = function (arr, fn) {
  * @param {array} arr 去重的数组
  * @example utilscore.unique([1,2,2,3,4,3,4,7]) => [1, 2, 3, 4, 7]
  */
-export const unique = (arr) => uniqueBy(arr,row=>row)
-    
+export const unique = (arr) => uniqueBy(arr, row => row)
+
 
 
 /**
@@ -61,7 +61,7 @@ export const minNum = (arr) =>
 /**
  * 将数组打乱
  * @param {array} arr 
- */    
+ */
 export const shuffle = (arr) => {
     let i = arr.length;
     while (i) {
@@ -69,4 +69,40 @@ export const shuffle = (arr) => {
         [arr[j], arr[i]] = [arr[i], arr[j]];
     }
     return arr
-}    
+}
+
+
+/**
+ * 扁平化数组 ==> 树形结构
+ * @param {Array} list 数组
+ * @param {Object} options 配置
+ * @param {String} options.pid 父级id名
+ * @param {String} options.id 自己id名
+ * @param {String} options.children 子集数组名
+ */
+export const convert = (array = [], options) => {
+    let { children, pid, id } = Object.assign({
+        children: 'children',
+        pid: 'pid',
+        id: 'id'
+    }, options)
+    var _arr = array.filter(item => {
+        var child = array.filter(child => {
+            return child[pid] === item[id]
+        })
+        item[children] = child
+        return item[pid] === 0
+    })
+
+    return _arr;
+}
+
+/**
+ * 树形结构 ==> 扁平化
+ * @param {Array} array 数组
+ * @param {String} childName 子集数组名
+ */
+export const convertFlat = (array = [], childName = 'children') => {
+    return array.reduce((acc, { [childName]: children, ...keys }) =>
+        (children = children || [], acc.concat([keys], convertFlat(children))), [])
+}
