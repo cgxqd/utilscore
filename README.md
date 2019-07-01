@@ -9,7 +9,7 @@
 
 ## 安装使用
 
-1. 直接下载`dist`目录下的[index.js](https://raw.githack.com/cgxqd/utilscore/master/dist/index.js)使用,支持CDN,UMD,CommonJS,ES6各模块化规范。
+1. 直接下载 utilsocre 目录下的 [index.js](https://raw.githack.com/cgxqd/utilscore/master/dist/index.js) 使用,支持CDN,UMD,CommonJS,ES6各模块化规范。
 2. 使用npm/yarn/cnpm安装,支持CommonJS,ES6各模块化规范。
 
 > 注意：原型扩展需要独立引入，utilscore/libs/prototype.js
@@ -18,10 +18,10 @@
 ### 浏览器:
 ``` html
 <!-- cdn 体验最新版 -->
-<script src="https://raw.githack.com/cgxqd/utilscore/master/dist/index.js"></script>
+<script src="https://raw.githack.com/cgxqd/utilscore/master/index.js"></script>
 
-<!-- 引入 node_modules/utils/dist 下的 index.js -->
-<!-- <script src="./node_modules/utilscore/dist/index.js"></script> -->
+<!-- 引入 node_modules/utilscore 下的 index.js -->
+<!-- <script src="./node_modules/utilscore/index.js"></script> -->
 <script>
 	let txt = utilscore.mask('12398765432',3,7) 
 	console.log(txt) // => "123****5432"
@@ -45,7 +45,7 @@ React、VueJS,小程序等javascript环境
 
 ``` javascript
 // 完整引入
-import utilscore from 'utilscore' // 或 import utilscore from 'utilscore/dist/index.js'
+import utilscore from 'utilscore'
 
 
 // 引入原型扩展
@@ -59,7 +59,7 @@ console.log(txt) // => "123****5432"
 
 你真的不需要完整引入所有函数，所以只引入需要使用的方法即可。
 ``` javascript
-import { mask } from 'utilscore' // 或 import { mask } from 'utilscore/dist/index.js'
+import { mask } from 'utilscore'
 
 let txt = mask('12398765432',3,7) 
 console.log(txt) // => "123****5432"
