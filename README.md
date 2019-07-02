@@ -9,7 +9,7 @@
 
 ## 安装使用
 
-1. 直接下载 utilsocre 目录下的 [index.js](https://raw.githack.com/cgxqd/utilscore/master/dist/index.js) 使用,支持CDN,UMD,CommonJS,ES6各模块化规范。
+1. 直接下载 utilsocre 目录下的 [index.js](https://raw.githack.com/cgxqd/utilscore/master/index.js) 使用,支持CDN,UMD,CommonJS,ES6各模块化规范。
 2. 使用npm/yarn/cnpm安装,支持CommonJS,ES6各模块化规范。
 
 > 注意：原型扩展需要独立引入，utilscore/libs/prototype.js
