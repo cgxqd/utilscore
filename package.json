@@ -25,5 +25,8 @@
     "javascript"
   ],
   "author": "cgx",
-  "license": "ISC"
+  "license": "ISC",
+  "browserslist": [
+    "last 2 Chrome versions"
+  ]
 }
