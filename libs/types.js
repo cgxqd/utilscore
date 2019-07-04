@@ -1,9 +1,11 @@
 
+const toString = (value) => Object.prototype.toString.call(value)
+
 /**
  * 判断类型Null
  * @param {any} value 
  */
-export const isNull = value => Object.prototype.toString.call(value) == "[object Null]"
+export const isNull = value => toString(value) == "[object Null]"
 
 /**
  * 判断类型Undefined 
@@ -33,38 +35,38 @@ export const isString = value => typeof(value) === 'string'
  * 判断类型Symbol
  * @param {any} value 
  */
-export const isSymbol = value => Object.prototype.toString.call(value) == "[object Symbol]"
+export const isSymbol = value => toString(value) == "[object Symbol]"
 
 /**
  * 判断类型Object
  * @param {any} value 
  */
-export const isObject = value => Object.prototype.toString.call(value) == "[object Object]"
+export const isObject = value => toString(value) == "[object Object]"
 
 /**
  * 判断类型RegExp
  * @param {any} value 
  */
-export const isRegExp = value=> Object.prototype.toString.call(value) == "[object RegExp]"
+export const isRegExp = value=> toString(value) == "[object RegExp]"
 
 /**
  * 判断类型Array
  * @param {any} value 
  */
-export const isArray = value => Object.prototype.toString.call(value) == "[object Array]"
+export const isArray = value => toString(value) == "[object Array]"
 
 /**
  * 判断类型Function
  * @param {any} value 
  */
-export const isFunction = value => Object.prototype.toString.call(value) == "[object Function]"
+export const isFunction = value => toString(value) == "[object Function]"
 
 /**
  * 获取数据类型
  * @param {any} value
  * @example utilscore.getType(null) // => "null"
  */
-export const getType = (value) => Object.prototype.toString.call(value).match(/\s([a-z]+)/i)[1].toLocaleLowerCase()
+export const getType = (value) => toString(value).match(/\s([a-z]+)/i)[1].toLocaleLowerCase()
 
 /**
  * 判断元素是否为空
