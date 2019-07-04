@@ -11,6 +11,7 @@ import * as other from './libs/other'
 import * as validator from './libs/validator'
 import * as base64 from './libs/base64'
 import * as event from './libs/event'
+import * as web from './libs.web'
 
 // 原型扩展需要自行添加
 // import './libs/prototype'
@@ -28,6 +29,7 @@ var utilscore = {
     ...validator,
     ...base64,
     ...event,
+    ...web,
     version:version,
 }
 

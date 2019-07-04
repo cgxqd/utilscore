@@ -165,4 +165,13 @@ console.log(txt) // => "123****5432"
 - fromEntries 扩展 es10 的 Object.fromEntries() 。
 - entries 扩展 es 的 Object.entries() 。
 
+> ###  [Web Api](https://github.com/cgxqd/utilscore/blob/master/libs.web/index.js)
+
+- blobToDataURL 	将 file、blob、stream 格式 转 DateURL。
+- dataURLtoBlob 	将图片的 dataURL 转为 Blob 格式。
+- getImgToBase64 	将图片的 url 转为 base64 格式。
+- getImgToBlob 		将图片的 url 转为 Blob 格式。
+- downloadFile 		在客户端触发文件下载。
+- setClipboardData 	将文本数据放置在剪贴板上。
+
 
