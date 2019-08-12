@@ -12,6 +12,7 @@ export const requered = (key='') => {
  * @example utilscore.formatTime('2019/06/04 12:45:32','YYYY~MM~DD hh~mm~ss 星期W  季度Q') // => "2019~06~04 12~45~32 星期二  季度2"
  */
 export const formatTime = (value, format) => {
+  value=value.replace(/-/g,'/').replace(/\./g,'/')
   let nowDate = new Date(value)
   let weeks = ['日', '一', '二', '三', '四', '五', '六']
   let time = (new Date(+nowDate + 8 * 3600 * 1000)).toISOString().substr(0, 19).replace(/[a-z]/i, ' ');
