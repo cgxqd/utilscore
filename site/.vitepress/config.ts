@@ -64,6 +64,7 @@ function sidebarModules() {
     {
       text: "API",
       items: [
+        { text: "matche 类型处理", link: "/docs/modules/matche" },
         { text: "string 字符串", link: "/docs/modules/string" },
         { text: "number 数字", link: "/docs/modules/number" },
         { text: "array 数组", link: "/docs/modules/array" },
