@@ -1,6 +1,6 @@
 {
   "name": "utilscore",
-  "version": "0.0.45",
+  "version": "0.1.0",
   "description": "前端业务代码工具库",
   "main": "dist/index.cjs",
   "module": "dist/index.js",
@@ -8,7 +8,9 @@
   "jsdelivr": "dist/index.global.js",
   "typings": "dist/index.d.ts",
   "type": "module",
-  "files": ["dist"],
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "dev": "tsup --watch",
     "build": "tsup"
