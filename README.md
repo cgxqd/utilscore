@@ -23,8 +23,8 @@ Using package manager
 
 ``` sh
 npm i utilscore
-yarn i utilscore
-pnpm i utilscore
+yarn add utilscore
+pnpm add utilscore
 ```
 
 ## Use
