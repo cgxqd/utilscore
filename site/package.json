@@ -1,0 +1,23 @@
+{
+  "private": true,
+  "name": "site",
+  "type": "module",
+  "scripts": {
+    "dev": "vitepress dev",
+    "build": "vitepress build"
+  },
+  "dependencies": {
+    "@types/mousetrap": "^1.6.11",
+    "element-plus": "^2.3.3",
+    "markdown-it-container": "^3.0.0",
+    "mousetrap": "^1.6.5",
+    "shiki": "^0.14.1",
+    "sweetalert": "^2.1.2",
+    "utilscore": "workspace:^0.0.45",
+    "vite": "^4.2.2",
+    "vitepress": "1.0.0-alpha.75",
+    "vitepress-doc-theme": "^0.0.4",
+    "vue": "^3.2.47",
+    "vue-console-feed": "^0.0.29"
+  }
+}

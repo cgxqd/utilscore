@@ -1,0 +1,51 @@
+name: deployment
+on:
+  workflow_dispatch: {}
+  push:
+    branches:
+      - master
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
+#     environment:
+#       name: github-pages
+#       url: ${{ steps.deployment.outputs.page_url }}
+    steps: 
+      - uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+      
+      # 设置 pnpm 版本
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v2
+        with:
+          version: 7
+          run_install: true
+
+      # 设置 node 版本
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18
+          cache: pnpm
+
+      # 安装依赖
+      - run: pnpm install
+      
+      # 打包 docs
+      - name: Build
+        run: pnpm build
+
+      - uses: actions/configure-pages@v2
+
+      - uses: actions/upload-pages-artifact@v1
+        with:
+          path: public
+
+      # 部署 github page
+      - name: Deploy
+        id: deployment
+        uses: actions/deploy-pages@v1

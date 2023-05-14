@@ -1,0 +1,76 @@
+{
+    "hooks": {
+        "after:bump": "echo 更新版本成功"
+    },
+    "git": {
+        "commitMessage": "chore(release): v${version}",
+        "commit": true,
+        "tag": true,
+        "push": true
+    },
+    "github": {
+        "release": true
+    },
+    "npm": {
+        "publish": false
+    },
+    "plugins": {
+        "@release-it/bumper": {
+            "out": "core/package.json"
+        },
+        "@release-it/conventional-changelog": {
+            "infile": "site/docs/guide/CHANGELOG.md",
+            "header": "# Changelog\n\nAll notable changes to this project will be documented in this file.",
+            "preset": {
+                "name": "angular",
+                "types": [
+                    {
+                        "type": "feat",
+                        "section": "Features"
+                    },
+                    {
+                        "type": "fix",
+                        "section": "Bug Fixes"
+                    },
+                    {
+                        "type": "revert",
+                        "section": "Reverts",
+                        "hidden": true
+                    },
+                    {
+                        "type": "docs",
+                        "section": "Documentation",
+                        "hidden": true
+                    },
+                    {
+                        "type": "style",
+                        "section": "Styles",
+                        "hidden": true
+                    },
+                    {
+                        "type": "chore",
+                        "section": "Chores",
+                        "hidden": true
+                    },
+                    {
+                        "typef": "refactor",
+                        "section": "Code Refactoring"
+                    },
+                    {
+                        "type": "test",
+                        "section": "Tests",
+                        "hidden": true
+                    },
+                    {
+                        "type": "build",
+                        "section": "Build System"
+                    },
+                    {
+                        "type": "ci",
+                        "section": "Continuous Integration"
+                    }
+                ]
+            }
+        }
+    }
+}
