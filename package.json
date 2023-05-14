@@ -1,6 +1,6 @@
 {
   "private": true,
-  "version": "0.1.0",
+  "version": "0.1.1",
   "scripts": {
     "release": "release-it --patch",
     "prepare": "npx husky install .husky",
