@@ -15,7 +15,7 @@ export default defineConfig({
     [
       "link",
       {
-        href: "https://cdn.jsdelivr.net/npm/@cgxqd/monaco-editor/dist/index.css",
+        href: "https://cgxqd.github.io/monaco-editor/dist/index.css",
         rel: "preload stylesheet",
       },
     ],

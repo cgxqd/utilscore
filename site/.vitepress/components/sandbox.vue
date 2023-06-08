@@ -65,9 +65,9 @@ const compartment = new Compartment({
   },
 });
 onMounted(async () => {
-  const basePath = "https://cdn.jsdelivr.net/npm/@cgxqd/monaco-editor";
+  const basePath = "https://cgxqd.github.io/monaco-editor";
   const { editor, initWorkerUrl } = (await utilscore.dynamicImport(
-    basePath,
+    basePath + '/dist/index.global.js',
     "monaco"
   )) as any;
   await initWorkerUrl(basePath, ["ts"]);
